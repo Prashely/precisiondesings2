@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services & Pricing - Precision Designs Agency</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #f7f8f9;
+      }
+      /* Agency Brand Colors */
+      .color-primary {
+        color: #1c2e4a;
+      }
+      .bg-primary {
+        background-color: #1c2e4a;
+      }
+      .color-secondary {
+        color: #4c84c4;
+      }
+      .bg-secondary {
+        background-color: #4c84c4;
+      }
+      .btn-green {
+        background-color: #10b981;
+      }
+      .btn-green:hover {
+        background-color: #059669;
+      }
+
+      /* Custom pricing card styling for emphasis */
+      .highlight-card {
+        transform: scale(1.05);
+        box-shadow: 0 20px 40px rgba(76, 132, 196, 0.4); /* Secondary color shadow */
+        border: 4px solid #4c84c4;
+        transition: all 0.3s ease-in-out;
+      }
+
+      /* Client logo carousel effect */
+      .logo-carousel-item {
+        filter: grayscale(100%);
+        transition: filter 0.3s ease;
+      }
+      .logo-carousel-item:hover {
+        filter: grayscale(0%);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Header (Consistent) -->
+    <header class="sticky top-0 z-50 bg-white shadow-lg">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+          <!-- Logo: Precision Designs Agency -->
+          <div class="flex-shrink-0">
+            <span class="text-3xl font-extrabold text-[#1C2E4A]"
+              >Precision Designs</span
+            >
+          </div>
+          <!-- Navigation Links (Desktop) -->
+          <nav class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-4">
+              <a
+                href="index.html"
+                class="text-gray-600 hover:text-[#1C2E4A] px-3 py-2 rounded-md text-lg font-medium transition duration-150"
+                >Home</a
+              >
+              <a
+                href="portfolio.html"
+                class="text-gray-600 hover:text-[#1C2E4A] px-3 py-2 rounded-md text-lg font-medium transition duration-150"
+                >Portfolio</a
+              >
+              <a
+                href="services.html"
+                class="text-white bg-[#1C2E4A] px-3 py-2 rounded-md text-lg font-medium transition duration-150 shadow-md"
+                >Services</a
+              >
+              <a
+                href="contact.html"
+                class="text-gray-600 hover:text-[#1C2E4A] px-3 py-2 rounded-md text-lg font-medium transition duration-150"
+                >Contact</a
+              >
+            </div>
+          </nav>
+          <!-- CTA Button (Desktop) -->
+          <a
+            href="tel:27683928066"
+            class="hidden md:block btn-primary px-5 py-2 text-white btn-green rounded-lg text-lg font-semibold transition duration-300 shadow-lg"
+          >
+            <i class="fas fa-phone mr-2"></i> Call Agency
+          </a>
+          <!-- Hamburger Menu Button (Mobile) -->
+          <button
+            id="menu-toggle"
+            class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-[#1C2E4A] hover:text-[#4c84c4] transition duration-150 focus:outline-none"
+            aria-expanded="false"
+            aria-label="Open menu"
+          >
+            <i class="fas fa-bars text-3xl" id="menu-icon"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation Menu -->
+      <nav
+        id="mobile-menu"
+        class="md:hidden hidden bg-white border-t border-gray-200 max-h-96 overflow-y-auto transition-all duration-300"
+      >
+        <div class="px-4 pt-2 pb-3 space-y-1">
+          <a
+            href="index.html"
+            class="text-gray-600 hover:text-[#1C2E4A] hover:bg-gray-50 block px-3 py-2 rounded-md text-base font-medium transition duration-150"
+            >Home</a
+          >
+          <a
+            href="portfolio.html"
+            class="text-gray-600 hover:text-[#1C2E4A] hover:bg-gray-50 block px-3 py-2 rounded-md text-base font-medium transition duration-150"
+            >Portfolio</a
+          >
+          <a
+            href="services.html"
+            class="text-white bg-[#1C2E4A] block px-3 py-2 rounded-md text-base font-medium transition duration-150"
+            >Services</a
+          >
+          <a
+            href="contact.html"
+            class="text-gray-600 hover:text-[#1C2E4A] hover:bg-gray-50 block px-3 py-2 rounded-md text-base font-medium transition duration-150"
+            >Contact</a
+          >
+          <div class="px-3 py-3 border-t border-gray-200 mt-3">
+            <a
+              href="tel:27683928066"
+              class="btn-green text-white block w-full text-center px-4 py-2 rounded-lg font-semibold transition duration-300 shadow-lg hover:bg-green-600"
+            >
+              <i class="fas fa-phone mr-2"></i> Call Agency
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+      const menuToggle = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const menuIcon = document.getElementById("menu-icon");
+
+      menuToggle.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+        menuToggle.setAttribute(
+          "aria-expanded",
+          menuToggle.getAttribute("aria-expanded") === "false" ? "true" : "false"
+        );
+        // Animate icon
+        menuIcon.classList.toggle("fa-bars");
+        menuIcon.classList.toggle("fa-times");
+      });
+
+      // Close menu when a link is clicked
+      const mobileMenuLinks = mobileMenu.querySelectorAll("a");
+      mobileMenuLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+          menuToggle.setAttribute("aria-expanded", "false");
+          menuIcon.classList.add("fa-bars");
+          menuIcon.classList.remove("fa-times");
+        });
+      });
+    </script>
+
+    <!-- Hero Section -->
+    <section class="bg-primary text-white py-20 md:py-32">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl sm:text-6xl font-extrabold mb-4">
+          Our Comprehensive Service Offerings
+        </h1>
+        <p class="text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto">
+          Designed specifically for <strong>small - businesses' growth</strong>,
+          our services combine digital marketing, web development, graphic
+          design, and essential compliance services see below...
+        </p>
+      </div>
+    </section>
+
+    <!-- 1. Website Design & Development Tiers (Pricing Table) -->
+    <section id="websites" class="py-16 md:py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-extrabold color-primary mb-4">
+            Precision Website Solutions
+          </h2>
+          <p class="text-xl text-gray-600">
+            Get online quickly and professionally with packages optimized for
+            growth.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+          <!-- Tier 1: Foundation (R1300) -->
+          <div
+            class="bg-gray-50 p-8 rounded-xl shadow-lg h-full flex flex-col justify-between transition duration-300 hover:shadow-2xl"
+          >
+            <div>
+              <h3 class="text-2xl font-bold color-primary mb-2">
+                The Starter Package
+              </h3>
+              <p class="text-5xl font-extrabold text-green-600 mb-6">
+                R1300<span class="text-lg font-medium text-gray-500">
+                  / Once-off</span
+                >
+              </p>
+              <p class="text-md text-gray-500 mb-6 font-medium">
+                This is best for entrepreneurs and small businesses looking to
+                get online quickly and affordably.
+              </p>
+              <ul class="space-y-4 text-gray-700 mb-8">
+                <li class="flex items-center">
+                  <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                  <strong>Landing Page</strong>
+                  (Budget friendly)
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check-circle text-green-500 mr-3"></i> Free
+                  Domain for <strong class="ml-2">1 Year</strong>
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check-circle text-green-500 mr-3"></i> Free
+                  Hosting (Basic Tier)
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                  <strong>No Monthly Fees</strong>(100% ownership)
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check-circle text-green-500 mr-3"></i> Social
+                  Media Integration
+                </li>
+              </ul>
+            </div>
+            <a
+                href="https://wa.me/27780499351?text=Hi,%20I%20would%20like%20to%20proceed%20with%20the%20Starter%20package."
+              class="w-full text-center py-3 bg-primary text-white font-semibold rounded-lg mt-4 hover:bg-opacity-90 transition duration-300"
+            >
+              Choose Starter
+            </a>
+          </div>
+
+          <!-- Tier 2: Momentum (R2150) - HIGHLIGHTED -->
+          <div
+            class="bg-white p-10 rounded-xl highlight-card z-10 h-full flex flex-col justify-between"
+          >
+            <div class="text-center mb-6">
+              <span
+                class="inline-block bg-[#4c84c4] text-white text-sm font-bold px-4 py-1 rounded-full uppercase tracking-wider"
+                >Most Popular</span
+              >
+            </div>
+            <div>
+              <h3 class="text-3xl font-bold color-primary mb-2">
+                The Premium Package
+              </h3>
+              <p class="text-6xl font-extrabold text-[#1C2E4A] mb-6">
+                R2150<span class="text-lg font-medium text-gray-600">
+                  / Once-off</span
+                >
+              </p>
+              <p class="text-md text-gray-500 mb-6 font-medium">
+                This package gives you everything you need to look professional
+                and trustworthy online.
+              </p>
+              <ul class="space-y-4 text-gray-800 mb-8">
+                <li class="flex items-center">
+                  <i class="fas fa-check-circle text-green-500 mr-3"></i> 1 - 5
+                  Pages Website
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check-circle text-green-500 mr-3"></i> Free
+                  Domain for <strong class="ml-1">1 Year</strong>
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check-circle text-green-500 mr-3"></i> Free
+                  Hosting (Basic Tier)
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                  <strong>No Monthly Fees</strong> (Full control)
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check-circle text-green-500 mr-3"></i> Social
+                  Media Integration
+                </li>
+                <li class="flex items-center font-semibold">
+                  <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                  Business Email Setup
+                </li>
+                <li class="flex items-center font-semibold">
+                  <i class="fas fa-check-circle text-green-500 mr-3"></i> Email
+                  Branding (Consistent look)
+                </li>
+                <li class="flex items-center font-semibold">
+                  <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                  Google Business Profile Setup/Optimization
+                </li>
+              </ul>
+            </div>
+            <a
+                href="https://wa.me/27780499351?text=Hi,%20I'm%20interested%20in%20the%20Premium%20package%20and%20I%20would%20like%20to%20hear%20more."
+              class="w-full text-center py-4 btn-green text-white text-xl font-bold rounded-lg mt-4 shadow-xl hover:shadow-2xl transition duration-300"
+            >
+              Start with Premium
+            </a>
+          </div>
+
+          <!-- Tier 3: Growth (Custom) -->
+          <div
+            class="bg-gray-50 p-8 rounded-xl shadow-lg h-full flex flex-col justify-between transition duration-300 hover:shadow-2xl"
+          >
+            <div>
+              <h3 class="text-2xl font-bold color-primary mb-2">
+                The Professional Vision
+              </h3>
+              <p class="text-5xl font-extrabold text-gray-900 mb-6">
+                Custom<span class="text-lg font-medium text-gray-500">
+                  / Let's chat</span
+                >
+              </p>
+              <p class="text-md text-gray-500 mb-6 font-medium">
+                For businesses with complex needs and aggressive growth targets.
+              </p>
+              <ul class="space-y-4 text-gray-700 mb-8">
+                <li class="flex items-center">
+                  <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                  Everything in Premium, <strong class="ml-1">Plus*</strong>
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                  Fixed Monthly Fees
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                  Multiple Business Email Accounts
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check-circle text-green-500 mr-3"></i> Social
+                  Media Management
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                  Digital Marketing Campaigns (PPC, SEO)
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                  Advanced Custom Features
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                  Brand Management
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                  In-person Business Consultation
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                  Early Access to New Features
+                </li>
+              </ul>
+            </div>
+            <a
+                href="https://wa.me/27780499351?text=Hi,%20I%20would%20like%20to%20find%20out%20whether%20my%20business%20qualifies%20for%20the%20professional%20package."
+              class="w-full text-center py-3 bg-primary text-white font-semibold rounded-lg mt-4 hover:bg-opacity-90 transition duration-300"
+            >
+              <i class="fas fa-question-circle mr-2"></i>
+              <span>Does my business qualify?
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Graphic Design and Branding -->
+    <section id="designs" class="py-16 md:py-24 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-extrabold color-primary mb-4">
+            Branding & Creative Design Services
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            A strong visual brand makes your business stand out. We create professional logos, posters, business cards, and complete branding solutions that your customers will remember and trust. Simple, clear pricing for your peace of mind.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <!-- Logo Design Card -->
+          <div
+            class="bg-white p-8 rounded-xl shadow-xl border-t-4 border-t-red-500 flex flex-col justify-between"
+          >
+            <div>
+              <h3 class="text-3xl font-bold text-red-500 mb-3">
+                <i class="fas fa-crown mr-2"></i> Logo Design
+              </h3>
+              <p class="text-5xl font-extrabold color-primary mb-6">R500</p>
+              <p class="text-gray-600 mb-4 font-semibold">
+                Our price reflects not just a design, but complete brand asset
+                delivery, ensuring your logo is ready for any application,
+                digital or print. You get:
+              </p>
+              <ul class="space-y-3 text-gray-700">
+                <li class="flex items-start">
+                  <i class="fas fa-file-export text-red-500 mr-3 mt-1"></i>
+                  <strong>CMYK</strong>: Ready for professional printing
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-laptop-code text-red-500 mr-3 mt-1"></i>
+                  <strong>RGB</strong>: Optimized for the best digital use (websites,
+                  social media).
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-file-image text-red-500 mr-3 mt-1"></i> <strong>SVG</strong>: Scalable without loss of quality (best for
+                  websites and large prints).
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-image text-red-500 mr-3 mt-1"></i> <strong>JPG</strong>
+                  : Easily shareable and recognizable file.
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-book-open text-red-500 mr-3 mt-1"></i>
+                  <strong>Brand Guide</strong> Includes logo usage and letterhead template
+                  guide.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Poster Design Card -->
+          <div
+            class="bg-white p-8 rounded-xl shadow-xl border-t-4 border-t-orange-500 flex flex-col justify-between"
+          >
+            <div>
+              <h3 class="text-3xl font-bold text-orange-500 mb-3">
+                <i class="fas fa-bullhorn mr-2"></i> Poster & Flyer Design
+              </h3>
+              <p class="text-5xl font-extrabold color-primary mb-6">
+                R200 - R650
+              </p>
+              <p class="text-gray-600 mb-4 font-semibold">
+                Pricing is determined by complexity and size, from a simple
+                promotional flyer to a multi-page event poster.
+              </p>
+              <ul class="space-y-3 text-gray-700">
+                <li class="flex items-center">
+                  <i class="fas fa-print text-orange-500 mr-3"></i> Print-ready
+                  files (high resolution).
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-mobile-alt text-orange-500 mr-3"></i> Digital
+                  versions for social sharing.
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-layer-group text-orange-500 mr-3"></i> Up to
+                  3 rounds of revisions included.
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-clock text-orange-500 mr-3"></i> 48-hour
+                  initial draft delivery.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Business Profile Card -->
+          <div
+            class="bg-white p-8 rounded-xl shadow-xl border-t-4 border-t-yellow-500 flex flex-col justify-between"
+          >
+            <div>
+              <h3 class="text-3xl font-bold text-yellow-500 mb-3">
+                <i class="fas fa-briefcase mr-2"></i> Business Profile
+              </h3>
+              <p class="text-5xl font-extrabold color-primary mb-6">R950</p>
+              <p class="text-gray-600 mb-4 font-semibold">
+                A professional, comprehensive business profile that showcases your company's expertise, credibility, and unique value proposition to clients and partners.
+              </p>
+              <ul class="space-y-3 text-gray-700">
+                <li class="flex items-center">
+                  <i class="fas fa-file-alt text-yellow-500 mr-3"></i>
+                  Professional profile document creation.
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-briefcase text-yellow-500 mr-3"></i> Company history and mission articulation.
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-star text-yellow-500 mr-3"></i> Services and products overview.
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-yellow-500 mr-3"></i> Key achievements and client testimonials.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Email Branding Card -->
+          <div
+            class="bg-white p-8 rounded-xl shadow-xl border-t-4 border-t-purple-500 flex flex-col justify-between"
+          >
+            <div>
+              <h3 class="text-3xl font-bold text-purple-500 mb-3">
+                <i class="fas fa-envelope mr-2"></i> Email Branding
+              </h3>
+              <p class="text-5xl font-extrabold color-primary mb-6">R250</p>
+              <p class="text-gray-600 mb-4 font-semibold">
+                Professional email branding templates designed to maintain consistency across all your communications and client touchpoints.
+              </p>
+              <ul class="space-y-3 text-gray-700">
+                <li class="flex items-center">
+                  <i class="fas fa-check text-purple-500 mr-3"></i>
+                  Compatible with Outlook, Gmail, and Apple Mail.
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-code text-purple-500 mr-3"></i> Professional HTML email signature.
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-book text-purple-500 mr-3"></i> Brand guide for email usage.
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-palette text-purple-500 mr-3"></i> Logo and color integration.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Business Cards Card -->
+          <div
+            class="bg-white p-8 rounded-xl shadow-xl border-t-4 border-t-indigo-500 flex flex-col justify-between"
+          >
+            <div>
+              <h3 class="text-3xl font-bold text-indigo-500 mb-3">
+                <i class="fas fa-address-card mr-2"></i> Business Cards
+              </h3>
+              <p class="text-5xl font-extrabold color-primary mb-6">R150</p>
+              <p class="text-gray-600 mb-4 font-semibold">
+                Professionally designed and print-ready business cards that make a lasting impression on potential clients and partners.
+              </p>
+              <ul class="space-y-3 text-gray-700">
+                <li class="flex items-center">
+                  <i class="fas fa-check text-indigo-500 mr-3"></i>
+                  Professional design with your logo and branding.
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-print text-indigo-500 mr-3"></i> Print-ready files (CMYK format).
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-layer-group text-indigo-500 mr-3"></i> Up to 2 rounds of revisions.
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-file-image text-indigo-500 mr-3"></i> Digital preview before printing.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Business Photoshoot Card -->
+          <div
+            class="bg-white p-8 rounded-xl shadow-xl border-t-4 border-t-pink-500 flex flex-col justify-between"
+          >
+            <div>
+              <h3 class="text-3xl font-bold text-pink-500 mb-3">
+                <i class="fas fa-camera mr-2"></i> Business Photoshoot
+              </h3>
+              <p class="text-5xl font-extrabold color-primary mb-6">R2000</p>
+              <p class="text-gray-600 mb-4 font-semibold">
+                Professional product and business photography sessions to elevate your brand presence and showcase your business in the best light.
+              </p>
+              <ul class="space-y-3 text-gray-700">
+                <li class="flex items-center">
+                  <i class="fas fa-check text-pink-500 mr-3"></i>
+                  2-3 hours professional photoshoot.
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-images text-pink-500 mr-3"></i> 30-50 edited high-resolution photos.
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-mobile-alt text-pink-500 mr-3"></i> Photos optimized for web and social media.
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-hdd text-pink-500 mr-3"></i> Full digital files delivered on USB.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Business Compliance & Admin Services -->
+    <section id="compliance" class="py-16 md:py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-extrabold color-primary mb-4">
+            Essential Business & Compliance Support
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Focus on growing your business; we handle the necessary paperwork
+            and regulatory setup quickly and accurately.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+          <div
+            class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-b-4 border-b-sky-500"
+          >
+            <i class="fas fa-building text-3xl text-sky-500 mb-3"></i>
+            <h4 class="text-xl font-bold color-primary mb-1">
+              Company Registration & BBB-EE
+            </h4>
+            <p class="text-3xl font-extrabold text-sky-600">R600</p>
+          </div>
+
+          <div
+            class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-b-4 border-b-sky-500"
+          >
+            <i
+              class="fas fa-file-invoice-dollar text-3xl text-sky-500 mb-3"
+            ></i>
+            <h4 class="text-xl font-bold color-primary mb-1">
+              SARS TAX CLEARANCE
+            </h4>
+            <p class="text-3xl font-extrabold text-sky-600">R450</p>
+          </div>
+
+          <div
+            class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-b-4 border-b-sky-500"
+          >
+            <i class="fas fa-user-tie text-3xl text-sky-500 mb-3"></i>
+            <h4 class="text-xl font-bold color-primary mb-1">
+              SARS TAX REPRESENTATIVE
+            </h4>
+            <p class="text-3xl font-extrabold text-sky-600">R150</p>
+          </div>
+
+          <div
+            class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-b-4 border-b-sky-500"
+          >
+            <i class="fas fa-address-card text-3xl text-sky-500 mb-3"></i>
+            <h4 class="text-xl font-bold color-primary mb-1">
+              Company Profile Development
+            </h4>
+            <p class="text-3xl font-extrabold text-sky-600">R450</p>
+          </div>
+
+          <div
+            class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-b-4 border-b-sky-500"
+          >
+            <i class="fas fa-database text-3xl text-sky-500 mb-3"></i>
+            <h4 class="text-xl font-bold color-primary mb-1">
+              Central Supplier Database (CSD)
+            </h4>
+            <p class="text-3xl font-extrabold text-sky-600">R200</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Digital Marketing Services -->
+    <!-- <section id="marketing" class="py-16 md:py-24 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-extrabold color-primary mb-4">
+            Digital Marketing Services
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Grow your online visibility and reach more customers. Our digital marketing strategies combine SEO, paid advertising, social media, and content creation to drive real business results for small companies. Let's boost your growth today.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+            <i class="fas fa-search text-3xl text-[#4c84c4] mb-4"></i>
+            <h4 class="text-xl font-bold color-primary mb-2">SEO Optimization</h4>
+            <p class="text-2xl font-extrabold text-[#4c84c4] mb-4">R800</p>
+            <p class="text-gray-700 mb-4">
+              Improve your search engine rankings and get found by customers looking for your services. We optimize your website and content so you appear higher on Google.
+            </p>
+            <ul class="space-y-2 text-sm text-gray-600">
+              <li>
+                <i class="fas fa-check-circle text-green-500 mr-3"></i> Keyword research and analysis
+              </li>
+              <li>
+                <i class="fas fa-check-circle text-green-500 mr-3"></i> Website optimization
+              </li>
+              <li>
+                <i class="fas fa-check-circle text-green-500 mr-3"></i> Backlink development
+              </li>
+              <li>
+                <i class="fas fa-check-circle text-green-500 mr-3"></i> Monthly performance reports
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+            <i class="fas fa-bullhorn text-3xl text-[#4c84c4] mb-4"></i>
+            <h4 class="text-xl font-bold color-primary mb-2">Social Media Management</h4>
+            <p class="text-2xl font-extrabold text-[#4c84c4] mb-4">R600</p>
+            <p class="text-gray-700 mb-4">
+              Build your online community and stay connected with your customers. We create engaging content and manage your social media presence so you can focus on your business.
+            </p>
+            <ul class="space-y-2 text-sm text-gray-600">
+              <li>
+                <i class="fas fa-check-circle text-green-500 mr-3"></i> Content calendar planning
+              </li>
+              <li>
+                <i class="fas fa-check-circle text-green-500 mr-3"></i> Post creation and scheduling
+              </li>
+              <li>
+                <i class="fas fa-check-circle text-green-500 mr-3"></i> Community engagement
+              </li>
+              <li>
+                <i class="fas fa-check-circle text-green-500 mr-3"></i> Analytics and insights
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+            <i class="fas fa-ad text-3xl text-[#4c84c4] mb-4"></i>
+            <h4 class="text-xl font-bold color-primary mb-2">Paid Advertising (PPC)</h4>
+            <p class="text-2xl font-extrabold text-[#4c84c4] mb-4">R950</p>
+            <p class="text-gray-700 mb-4">
+              Get immediate results with targeted paid ads. We manage your Google and Facebook campaigns to bring qualified customers to your business with every click.
+            </p>
+            <ul class="space-y-2 text-sm text-gray-600">
+              <li>
+                <i class="fas fa-check-circle text-green-500 mr-3"></i> Campaign setup and optimization
+              </li>
+              <li>
+                <i class="fas fa-check-circle text-green-500 mr-3"></i> Keyword bidding strategy
+              </li>
+              <li>
+                <i class="fas fa-check-circle text-green-500 mr-3"></i> Ad copywriting
+              </li>
+              <li>
+                <i class="fas fa-check-circle text-green-500 mr-3"></i> Budget management
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+            <i class="fas fa-pen-fancy text-3xl text-[#4c84c4] mb-4"></i>
+            <h4 class="text-xl font-bold color-primary mb-2">Content Marketing</h4>
+            <p class="text-2xl font-extrabold text-[#4c84c4] mb-4">R700</p>
+            <p class="text-gray-700 mb-4">
+              Tell your story and build trust with valuable, helpful content. We create blog posts, articles, and guides that attract customers and establish you as an expert in your field.
+            </p>
+            <ul class="space-y-2 text-sm text-gray-600">
+              <li>
+                <i class="fas fa-check-circle text-green-500 mr-3"></i> Blog post creation
+              </li>
+              <li>
+                <i class="fas fa-check-circle text-green-500 mr-3"></i> SEO-optimized writing
+              </li>
+              <li>
+                <i class="fas fa-check-circle text-green-500 mr-3"></i> Content strategy
+              </li>
+              <li>
+                <i class="fas fa-check-circle text-green-500 mr-3"></i> Monthly publishing schedule
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+            <i class="fas fa-envelope text-3xl text-[#4c84c4] mb-4"></i>
+            <h4 class="text-xl font-bold color-primary mb-2">Email Marketing</h4>
+            <p class="text-2xl font-extrabold text-[#4c84c4] mb-4">R500</p>
+            <p class="text-gray-700 mb-4">
+              Stay in touch with your customers through professional email campaigns. We help you build lists, create compelling messages, and track results that drive sales.
+            </p>
+            <ul class="space-y-2 text-sm text-gray-600">
+              <li>
+                <i class="fas fa-check-circle text-green-500 mr-3"></i> Email list management
+              </li>
+              <li>
+                <i class="fas fa-check-circle text-green-500 mr-3"></i> Template design
+              </li>
+              <li>
+                <i class="fas fa-check-circle text-green-500 mr-3"></i> Campaign writing
+              </li>
+              <li>
+                <i class="fas fa-check-circle text-green-500 mr-3"></i> Performance tracking
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+            <i class="fas fa-chart-line text-3xl text-[#4c84c4] mb-4"></i>
+            <h4 class="text-xl font-bold color-primary mb-2">Analytics & Reporting</h4>
+            <p class="text-2xl font-extrabold text-[#4c84c4] mb-4">R400</p>
+            <p class="text-gray-700 mb-4">
+              Understand what's working and what needs improvement. We track your digital marketing performance and provide clear reports showing your return on investment.
+            </p>
+            <ul class="space-y-2 text-sm text-gray-600">
+              <li>
+                <i class="fas fa-check-circle text-green-500 mr-3"></i> Website traffic analysis
+              </li>
+              <li>
+                <i class="fas fa-check-circle text-green-500 mr-3"></i> Conversion tracking
+              </li>
+              <li>
+                <i class="fas fa-check-circle text-green-500 mr-3"></i> Monthly reports
+              </li>
+              <li>
+                <i class="fas fa-check-circle text-green-500 mr-3"></i> Actionable recommendations
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- 5. Small Business Client Showcase (Logo Carousel Placeholder) -->
+    <section class="py-16 md:py-24 bg-primary text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-extrabold text-white mb-4">
+            Small Businesses We've Assisted
+          </h2>
+          <p class="text-xl text-gray-300">
+            Proudly helping local enterprises establish and grow their digital
+            footprint.
+          </p>
+        </div>
+
+        <!-- Logo Carousel Placeholder -->
+        <div
+          class="flex flex-wrap justify-center items-center space-x-8 md:space-x-12 py-8 overflow-hidden"
+        >
+          <!-- Using placeholder images that filter to grayscale on hover -->
+          <div
+            class="w-24 h-24 sm:w-32 sm:h-32 p-2 logo-carousel-item"
+            title="Client 1"
+          >
+            <img
+              src="https://placehold.co/128x128/ffffff/1C2E4A?text=LOGO+A"
+              class="w-full h-full object-contain rounded-lg"
+            />
+          </div>
+          <div
+            class="w-24 h-24 sm:w-32 sm:h-32 p-2 logo-carousel-item"
+            title="Client 2"
+          >
+            <img
+              src="https://placehold.co/128x128/ffffff/1C2E4A?text=LOGO+B"
+              class="w-full h-full object-contain rounded-lg"
+            />
+          </div>
+          <div
+            class="w-24 h-24 sm:w-32 sm:h-32 p-2 logo-carousel-item"
+            title="Client 3"
+          >
+            <img
+              src="https://placehold.co/128x128/ffffff/1C2E4A?text=LOGO+C"
+              class="w-full h-full object-contain rounded-lg"
+            />
+          </div>
+          <div
+            class="w-24 h-24 sm:w-32 sm:h-32 p-2 logo-carousel-item hidden sm:block"
+            title="Client 4"
+          >
+            <img
+              src="https://placehold.co/128x128/ffffff/1C2E4A?text=LOGO+D"
+              class="w-full h-full object-contain rounded-lg"
+            />
+          </div>
+          <div
+            class="w-24 h-24 sm:w-32 sm:h-32 p-2 logo-carousel-item hidden lg:block"
+            title="Client 5"
+          >
+            <img
+              src="https://placehold.co/128x128/ffffff/1C2E4A?text=LOGO+E"
+              class="w-full h-full object-contain rounded-lg"
+            />
+          </div>
+        </div>
+
+        <div class="text-center mt-8">
+          <p class="text-lg text-gray-400">
+            <i class="fas fa-lightbulb mr-2 text-yellow-400"></i> Placeholders
+            will be replaced with actual client logos upon project completion.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer (Consistent) -->
+    <footer id="contact" class="bg-[#1C2E4A] text-white py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+          <!-- Company Info -->
+          <div>
+            <h3 class="text-2xl font-bold mb-4 text-[#4c84c4]">
+              Precision Designs
+            </h3>
+            <p class="text-gray-400">
+              Innovative, top-tier digital solutions for small and growing
+              businesses.
+            </p>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h4 class="text-xl font-semibold mb-4 text-white">Quick Links</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="index.html"
+                  class="text-gray-400 hover:text-[#4c84c4] transition duration-150"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="portfolio.html"
+                  class="text-gray-400 hover:text-[#4c84c4] transition duration-150"
+                  >Portfolio</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services.html"
+                  class="text-gray-400 hover:text-[#4c84c4] transition duration-150"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  class="text-gray-400 hover:text-[#4c84c4] transition duration-150"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Services -->
+          <div>
+            <h4 class="text-xl font-semibold mb-4 text-white">Services</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#websites"
+                  class="text-gray-400 hover:text-[#4c84c4] transition duration-150"
+                  >Web Design & Development</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#designs"
+                  class="text-gray-400 hover:text-[#4c84c4] transition duration-150"
+                  >Graphic Design</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#compliance"
+                  class="text-gray-400 hover:text-[#4c84c4] transition duration-150"
+                  >Business Compliance</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#marketing"
+                  class="text-gray-400 hover:text-[#4c84c4] transition duration-150"
+                  >Digital Marketing</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div>
+            <h4 class="text-xl font-semibold mb-4 text-white">Get in Touch</h4>
+            <a
+              href="mailto:info@precisiondesignsagency.com"
+              class="text-gray-400 mb-2"
+            >
+              <i class="fas fa-envelope mr-2 text-[#4c84c4]"></i>
+              info@precisiondesignsagency.com
+            </a>
+            <a href="tel:27683928066" class="block text-gray-400 mb-2">
+              <i class="fas fa-phone mr-2 text-[#4c84c4]"></i> +27 68 392 8066
+            </a>
+            <div class="flex space-x-4 mt-4">
+              <a href="#" class="text-gray-400 hover:text-[#4c84c4]"
+                ><i class="fab fa-facebook-f text-2xl"></i
+              ></a>
+              <a href="#" class="text-gray-400 hover:text-[#4c84c4]"
+                ><i class="fab fa-twitter text-2xl"></i
+              ></a>
+              <a href="#" class="text-gray-400 hover:text-[#4c84c4]"
+                ><i class="fab fa-linkedin-in text-2xl"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="mt-12 pt-8 border-t border-gray-700 text-center text-gray-500"
+        >
+          &copy; 2025 Precision Designs Agency. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating WhatsApp Icon (Consistent) -->
+    <a
+      href="https://wa.me/27780499351"
+      target="_blank"
+      class="fixed bottom-6 right-6 z-50 p-4 bg-green-500 text-white rounded-full shadow-2xl transition duration-300 hover:bg-green-600 hover:scale-105"
+      aria-label="Chat on WhatsApp"
+    >
+      <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
+  </body>
+</html>

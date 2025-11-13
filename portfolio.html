@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Precision Designs Agency</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #f7f8f9;
+      }
+      /* Custom fixed background image style */
+      .hero-fixed-bg {
+        /* Using a high-contrast blue/grey placeholder to match agency colors */
+        background-image: url("https://placehold.co/1920x800/1C2E4A/ffffff?text=Precision+Designs+Showcase");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed; /* Fixed background */
+      }
+      /* Custom button style for hover effects */
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+      .portfolio-card {
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+      }
+      .portfolio-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+      }
+      .color-primary {
+        color: #1c2e4a;
+      }
+      .bg-primary {
+        background-color: #1c2e4a;
+      }
+      .color-secondary {
+        color: #4c84c4;
+      }
+      .bg-secondary {
+        background-color: #4c84c4;
+      }
+      .btn-green {
+        background-color: #10b981;
+      }
+      .btn-green:hover {
+        background-color: #059669;
+      }
+      .input-focus:focus {
+        border-color: #4c84c4;
+        box-shadow: 0 0 0 3px rgba(76, 132, 196, 0.5);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Header (Consistent) -->
+    <header class="sticky top-0 z-50 bg-white shadow-lg">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+          <!-- Logo: Precision Designs Agency -->
+          <div class="flex-shrink-0">
+            <span class="text-3xl font-extrabold text-[#1C2E4A]"
+              >Precision Designs</span
+            >
+          </div>
+          <!-- Navigation Links (Desktop) -->
+          <nav class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-4">
+              <a
+                href="index.html"
+                class="text-gray-600 hover:text-[#1C2E4A] px-3 py-2 rounded-md text-lg font-medium transition duration-150"
+                >Home</a
+              >
+              <a
+                href="portfolio.html"
+                class="text-white bg-[#1C2E4A] px-3 py-2 rounded-md text-lg font-medium transition duration-150 shadow-md"
+                >Portfolio</a
+              >
+              <a
+                href="services.html"
+                class="text-gray-600 hover:text-[#1C2E4A] px-3 py-2 rounded-md text-lg font-medium transition duration-150"
+                >Services</a
+              >
+              <a
+                href="contact.html"
+                class="text-gray-600 hover:text-[#1C2E4A] px-3 py-2 rounded-md text-lg font-medium transition duration-150"
+                >Contact</a
+              >
+            </div>
+          </nav>
+          <!-- CTA Button (Desktop) -->
+          <a
+            href="tel:27683928066"
+            class="hidden md:block btn-primary px-5 py-2 text-white btn-green rounded-lg text-lg font-semibold transition duration-300 shadow-lg"
+          >
+            <i class="fas fa-phone mr-2"></i> Call Agency
+          </a>
+          <!-- Hamburger Menu Button (Mobile) -->
+          <button
+            id="menu-toggle"
+            class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-[#1C2E4A] hover:text-[#4c84c4] transition duration-150 focus:outline-none"
+            aria-expanded="false"
+            aria-label="Open menu"
+          >
+            <i class="fas fa-bars text-3xl" id="menu-icon"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation Menu -->
+      <nav
+        id="mobile-menu"
+        class="md:hidden hidden bg-white border-t border-gray-200 max-h-96 overflow-y-auto transition-all duration-300"
+      >
+        <div class="px-4 pt-2 pb-3 space-y-1">
+          <a
+            href="index.html"
+            class="text-gray-600 hover:text-[#1C2E4A] hover:bg-gray-50 block px-3 py-2 rounded-md text-base font-medium transition duration-150"
+            >Home</a
+          >
+          <a
+            href="portfolio.html"
+            class="text-white bg-[#1C2E4A] block px-3 py-2 rounded-md text-base font-medium transition duration-150"
+            >Portfolio</a
+          >
+          <a
+            href="services.html"
+            class="text-gray-600 hover:text-[#1C2E4A] hover:bg-gray-50 block px-3 py-2 rounded-md text-base font-medium transition duration-150"
+            >Services</a
+          >
+          <a
+            href="contact.html"
+            class="text-gray-600 hover:text-[#1C2E4A] hover:bg-gray-50 block px-3 py-2 rounded-md text-base font-medium transition duration-150"
+            >Contact</a
+          >
+          <div class="px-3 py-3 border-t border-gray-200 mt-3">
+            <a
+              href="tel:27683928066"
+              class="btn-green text-white block w-full text-center px-4 py-2 rounded-lg font-semibold transition duration-300 shadow-lg hover:bg-green-600"
+            >
+              <i class="fas fa-phone mr-2"></i> Call Agency
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+      const menuToggle = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const menuIcon = document.getElementById("menu-icon");
+
+      menuToggle.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+        menuToggle.setAttribute(
+          "aria-expanded",
+          menuToggle.getAttribute("aria-expanded") === "false"
+            ? "true"
+            : "false"
+        );
+        // Animate icon
+        menuIcon.classList.toggle("fa-bars");
+        menuIcon.classList.toggle("fa-times");
+      });
+
+      // Close menu when a link is clicked
+      const mobileMenuLinks = mobileMenu.querySelectorAll("a");
+      mobileMenuLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+          menuToggle.setAttribute("aria-expanded", "false");
+          menuIcon.classList.add("fa-bars");
+          menuIcon.classList.remove("fa-times");
+        });
+      });
+    </script>
+    <!-- 1. Hero Header with Fixed Background -->
+    <section class="bg-primary text-white py-20 md:py-32">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl sm:text-6xl font-extrabold mb-4">
+          Our Comprehensive Service Offerings
+        </h1>
+        <p class="text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto">
+          Designed specifically for <strong>small - businesses' growth</strong>,
+          our services combine digital marketing, web development, graphic
+          design, and essential compliance services see below...
+        </p>
+      </div>
+    </section>
+
+    <!-- 2. Portfolio Showcase Section -->
+    <section id="portfolio-showcase" class="py-16 md:py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-extrabold text-gray-900 mb-4">
+            Our <em>Precisionly</em> Crafted Portfolio
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            We don't just design aesthetically pleasing websites. Our work has a
+            measurable impact on the businesses we partner with. We design with
+            <strong>purpose</strong> and <strong>precision</strong> — every
+            element serves a strategic goal to drive real results for your
+            business.
+          </p>
+        </div>
+
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
+        >
+          <!-- Reusable Portfolio Card Component (12 Total) -->
+          <script>
+            const portfolioData = [
+              {
+                title: "Kumba Engineering & Projects",
+                description:
+                  "We assisted with a responsive website redesign, branded email signatures, and branded calenders.",
+              },
+              {
+                title: "Mphiwa-Fela",
+                description:
+                  "We assisted with a responsive website, social media setup, Google Business Profile, and business email setup",
+              },
+              {
+                title: "Lutendo Business Supplies",
+                description:
+                  "We helped with the logo design, branding, business card design, and business email setup & branding",
+              },
+              {
+                title: "Maporch Enterprise",
+                description:
+                  "We assisted with a responsive website, google business profile, facebook and business email branding",
+              },
+              {
+                title: "FixIt Central",
+                description:
+                  "We assist with marketing posters and we built a responsive website.",
+              },
+              {
+                title: "Nash Fitness",
+                description:
+                  "We assisted with marketing posters, business card design, and a responsive website.",
+              },
+              {
+                title: "Vhugala Goodwill Ngwana",
+                description: "We assited with a responsive website design.",
+              },
+              {
+                title: "DMSS",
+                description:
+                  "We assisted with a responsive website design and google business profile setup.",
+              },
+              {
+                title: "BoRratsela",
+                description:
+                  "We assisted with a responsive website design, logo design and various graphic design needs",
+              },
+              {
+                title: "EcoSuitors",
+                description:
+                  "We assisted with business cards, business email setup, marketing posters and website hosting ",
+              },
+              {
+                title: "Capital C Finance",
+                description:
+                  "We assited with business card design and logo design",
+              },
+              {
+                title: "Securilec",
+                description:
+                  "We assisted with logo design, responsive website and google business profile set up.",
+              },
+            ];
+
+            const cardsContainer = document.querySelector(".grid");
+            portfolioData.forEach((item, index) => {
+              const card = `
+                            <div class="portfolio-card bg-white rounded-xl overflow-hidden transform transition duration-500 border border-gray-100">
+                                <!-- Placeholder Image Area -->
+                                <div class="w-full h-40 bg-gray-100 flex items-center justify-center text-center p-4 border-b-4 border-b-[#4c84c4]">
+                                    <span class="text-lg font-bold text-gray-600">${
+                                      item.title.split(" - ")[0]
+                                    }</span>
+                                </div>
+
+                                <div class="p-5">
+                                    <h3 class="text-xl font-bold text-gray-900 mb-2">${
+                                      item.title
+                                    }</h3>
+                                    <p class="text-gray-600 text-sm mb-4">${
+                                      item.description
+                                    }</p>
+                                    <span class="inline-block bg-indigo-50 text-[#1C2E4A] text-xs font-semibold px-3 py-1 rounded-full">
+                                        <i class="fas fa-code mr-1"></i> Design Concept ${
+                                          index + 1
+                                        }
+                                    </span>
+                                </div>
+                            </div>
+                        `;
+              cardsContainer.innerHTML += card;
+            });
+          </script>
+        </div>
+
+        <div class="text-center mt-16">
+          <a
+            href="#contact"
+            class="px-8 py-4 bg-green-500 text-white text-xl font-bold rounded-full hover:bg-green-600 transition duration-300 shadow-lg"
+          >
+            Let's Discuss Your Project
+            <i class="fas fa-rocket ml-2"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Horizontal Separator -->
+    <hr class="max-w-7xl mx-auto border-gray-200" />
+
+    <!-- Recent Designs (Portrait Posters) -->
+    <section id="recent-designs" class="py-16 md:py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-extrabold text-gray-900 mb-4">
+            Recent Designs
+          </h2>
+          <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            A small set of out recent posters. For moe designs, reach out to us.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div
+            class="portfolio-card bg-white rounded-xl overflow-hidden border border-gray-100"
+          >
+            <img
+              src="https://placehold.co/600x900/ffffff/1C2E4A?text=Poster+1"
+              alt="Poster 1"
+              class="w-full h-80 object-cover"
+            />
+            <div class="p-4">
+              <div class="text-sm text-gray-700 font-semibold">
+                Portrait Poster 1
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="portfolio-card bg-white rounded-xl overflow-hidden border border-gray-100"
+          >
+            <img
+              src="https://placehold.co/600x900/ffffff/1C2E4A?text=Poster+2"
+              alt="Poster 2"
+              class="w-full h-80 object-cover"
+            />
+            <div class="p-4">
+              <div class="text-sm text-gray-700 font-semibold">
+                Portrait Poster 2
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="portfolio-card bg-white rounded-xl overflow-hidden border border-gray-100"
+          >
+            <img
+              src="https://placehold.co/600x900/ffffff/1C2E4A?text=Poster+3"
+              alt="Poster 3"
+              class="w-full h-80 object-cover"
+            />
+            <div class="p-4">
+              <div class="text-sm text-gray-700 font-semibold">
+                Portrait Poster 3
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="portfolio-card bg-white rounded-xl overflow-hidden border border-gray-100"
+          >
+            <img
+              src="https://placehold.co/600x900/ffffff/1C2E4A?text=Poster+4"
+              alt="Poster 4"
+              class="w-full h-80 object-cover"
+            />
+            <div class="p-4">
+              <div class="text-sm text-gray-700 font-semibold">
+                Portrait Poster 4
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="portfolio-card bg-white rounded-xl overflow-hidden border border-gray-100"
+          >
+            <img
+              src="https://placehold.co/600x900/ffffff/1C2E4A?text=Poster+5"
+              alt="Poster 5"
+              class="w-full h-80 object-cover"
+            />
+            <div class="p-4">
+              <div class="text-sm text-gray-700 font-semibold">
+                Portrait Poster 5
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="portfolio-card bg-white rounded-xl overflow-hidden border border-gray-100"
+          >
+            <img
+              src="https://placehold.co/600x900/ffffff/1C2E4A?text=Poster+6"
+              alt="Poster 6"
+              class="w-full h-80 object-cover"
+            />
+            <div class="p-4">
+              <div class="text-sm text-gray-700 font-semibold">
+                Portrait Poster 6
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Testimonials Section (Reused) -->
+    <section id="testimonials" class="py-16 md:py-24 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-extrabold text-gray-900">
+            Precision in Practice: Client Testimonials
+          </h2>
+          <p class="mt-4 text-xl text-gray-600">
+            Trust built on proven results and dedicated support for small
+            businesses.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Testimonial 1 -->
+          <div
+            class="bg-white p-8 rounded-xl shadow-xl border-t-4 border-t-[#1C2E4A] transition duration-300 hover:shadow-2xl"
+          >
+            <i class="fas fa-quote-left text-3xl text-gray-300 mb-4"></i>
+            <p class="text-lg text-gray-700 italic mb-6">
+              "Precision Designs Agency delivered a website that is
+              professional, responsive, and easy for my customers to use. It
+              immediately increased our online booking conversions by 30%."
+            </p>
+            <div class="font-semibold text-gray-900">Sarah K.</div>
+            <div class="text-sm text-[#1C2E4A]">Owner, Local Cafe</div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div
+            class="bg-white p-8 rounded-xl shadow-xl border-t-4 border-t-[#1C2E4A] transition duration-300 hover:shadow-2xl"
+          >
+            <i class="fas fa-quote-left text-3xl text-gray-300 mb-4"></i>
+            <p class="text-lg text-gray-700 italic mb-6">
+              "Excellent service and fast delivery! They understood exactly what
+              my small consulting firm needed to look credible online without
+              breaking the bank."
+            </p>
+            <div class="font-semibold text-gray-900">Mark H.</div>
+            <div class="text-sm text-[#1C2E4A]">Financial Consultant</div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div
+            class="bg-white p-8 rounded-xl shadow-xl border-t-4 border-t-[#1C2E4A] transition duration-300 hover:shadow-2xl"
+          >
+            <i class="fas fa-quote-left text-3xl text-gray-300 mb-4"></i>
+            <p class="text-lg text-gray-700 italic mb-6">
+              "From concept to launch, the process was seamless. The custom
+              design provided us with the unique look we needed to stand out in
+              a crowded market."
+            </p>
+            <div class="font-semibold text-gray-900">Jasmine T.</div>
+            <div class="text-sm text-[#1C2E4A]">E-commerce Manager</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Footer (Reused) -->
+    <footer id="contact" class="bg-[#1C2E4A] text-white py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+          <!-- Company Info -->
+          <div>
+            <h3 class="text-2xl font-bold mb-4 text-[#4c84c4]">
+              Precision Designs
+            </h3>
+            <p class="text-gray-400">
+              Innovative, top-tier digital solutions for small and growing
+              businesses.
+            </p>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h4 class="text-xl font-semibold mb-4 text-white">Quick Links</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="index.html"
+                  class="text-gray-400 hover:text-[#4c84c4] transition duration-150"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="portfolio.html"
+                  class="text-gray-400 hover:text-[#4c84c4] transition duration-150"
+                  >Portfolio</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services.html"
+                  class="text-gray-400 hover:text-[#4c84c4] transition duration-150"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  class="text-gray-400 hover:text-[#4c84c4] transition duration-150"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Services -->
+          <div>
+            <h4 class="text-xl font-semibold mb-4 text-white">Services</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="services.html#websites"
+                  class="text-gray-400 hover:text-[#4c84c4] transition duration-150"
+                  >Web Design & Development</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services.html#designs"
+                  class="text-gray-400 hover:text-[#4c84c4] transition duration-150"
+                  >Graphic Design</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services.html#compliance"
+                  class="text-gray-400 hover:text-[#4c84c4] transition duration-150"
+                  >Business Compliance</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services.html#marketing"
+                  class="text-gray-400 hover:text-[#4c84c4] transition duration-150"
+                  >Digital Marketing</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div>
+            <h4 class="text-xl font-semibold mb-4 text-white">Get in Touch</h4>
+            <a
+              href="mailto:info@precisiondesignsagency.com"
+              class="text-gray-400 mb-2"
+            >
+              <i class="fas fa-envelope mr-2 text-[#4c84c4]"></i>
+              info@precisiondesignsagency.com
+            </a>
+            <a href="tel:27683928066" class="block text-gray-400 mb-2">
+              <i class="fas fa-phone mr-2 text-[#4c84c4]"></i> +27 68 392 8066
+            </a>
+            <div class="flex space-x-4 mt-4">
+              <a href="#" class="text-gray-400 hover:text-[#4c84c4]"
+                ><i class="fab fa-facebook-f text-2xl"></i
+              ></a>
+              <a href="#" class="text-gray-400 hover:text-[#4c84c4]"
+                ><i class="fab fa-twitter text-2xl"></i
+              ></a>
+              <a href="#" class="text-gray-400 hover:text-[#4c84c4]"
+                ><i class="fab fa-linkedin-in text-2xl"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="mt-12 pt-8 border-t border-gray-700 text-center text-gray-500"
+        >
+          &copy; 2025 Precision Designs Agency. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating WhatsApp Icon -->
+    <a
+      href="https://wa.me/27780499351"
+      target="_blank"
+      class="fixed bottom-6 right-6 z-50 p-4 bg-green-500 text-white rounded-full shadow-2xl transition duration-300 hover:bg-green-600 hover:scale-105"
+      aria-label="Chat on WhatsApp"
+    >
+      <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
+  </body>
+</html>

@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Precision Designs Agency</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for Icons -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Configure Tailwind and the Inter font -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#bc9c22", // Dark Blue
+              secondary: "#0a1d37", // Amber/Gold
+              "dark-bg": "#0F172A", // Slate 900
+              whatsapp: "#25D366", // WhatsApp Green
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+      /* Custom Pulse Animation for CTA button */
+      @keyframes subtle-pulse {
+        0%,
+        100% {
+          box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.7);
+        }
+        50% {
+          box-shadow: 0 0 0 5px rgba(245, 158, 11, 0);
+        }
+      }
+      .animate-subtle-pulse {
+        animation: subtle-pulse 2s infinite cubic-bezier(0.4, 0, 0.6, 1);
+      }
+
+      /* Styling for the Floating WhatsApp Button */
+      .whatsapp-float {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1000;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .whatsapp-float:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+      }
+      /* Agency Brand Colors */
+      .color-primary {
+        color: #1c2e4a;
+      }
+      .bg-primary {
+        background-color: #1c2e4a;
+      }
+      .color-secondary {
+        color: #4c84c4;
+      }
+      .bg-secondary {
+        background-color: #bc9c22;
+      }
+      .btn-green {
+        background-color: #bc9c22;
+      }
+      .btn-green:hover {
+        background-color: #eec50f;
+      }
+      .input-focus:focus {
+        border-color: #4c84c4;
+        box-shadow: 0 0 0 3px rgba(76, 132, 196, 0.5);
+      }
+    </style>
+  </head>
+  <body class="font-sans antialiased text-gray-800 bg-white">
+    <!-- Navigation Header (Consistent) -->
+    <header class="sticky top-0 z-50 bg-white shadow-lg">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+          <!-- Logo: Precision Designs Agency -->
+          <div class="flex-shrink-0">
+            <span class="text-3xl font-extrabold text-[#1C2E4A]"
+              >Precision Designs</span
+            >
+          </div>
+          <!-- Navigation Links (Desktop) -->
+          <nav class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-4">
+              <a
+                href="index.html"
+                class="text-white bg-[#1C2E4A] px-3 py-2 rounded-md text-lg font-medium transition duration-150"
+                >Home</a
+              >
+              <a
+                href="portfolio.html"
+                class="text-gray-600 hover:text-[#1C2E4A] px-3 py-2 rounded-md text-lg font-medium transition duration-150"
+                >Portfolio</a
+              >
+              <a
+                href="services.html"
+                class="text-gray-600 hover:text-[#1C2E4A] px-3 py-2 rounded-md text-lg font-medium transition duration-150"
+                >Services</a
+              >
+              <a
+                href="contact.html"
+                class="text-gray-600 hover:text-[#1C2E4A] px-3 py-2 rounded-md text-lg font-medium transition duration-150"
+                >Contact</a
+              >
+            </div>
+          </nav>
+          <!-- CTA Button (Desktop) -->
+          <a
+            href="tel:27683928066"
+            class="hidden md:block btn-primary px-5 py-2 text-white btn-green rounded-lg text-lg font-semibold transition duration-300 shadow-lg"
+          >
+            <i class="fas fa-phone mr-2"></i> Call Agency
+          </a>
+          <!-- Hamburger Menu Button (Mobile) -->
+          <button
+            id="menu-toggle"
+            class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-[#1C2E4A] hover:text-[#4c84c4] transition duration-150 focus:outline-none"
+            aria-expanded="false"
+            aria-label="Open menu"
+          >
+            <i class="fas fa-bars text-3xl" id="menu-icon"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation Menu -->
+      <nav
+        id="mobile-menu"
+        class="md:hidden hidden bg-white border-t border-gray-200 max-h-96 overflow-y-auto transition-all duration-300"
+      >
+        <div class="px-4 pt-2 pb-3 space-y-1">
+          <a
+            href="index.html"
+            class="text-white bg-[#1C2E4A] block px-3 py-2 rounded-md text-base font-medium transition duration-150"
+            >Home</a
+          >
+          <a
+            href="portfolio.html"
+            class="text-gray-600 hover:text-[#1C2E4A] hover:bg-gray-50 block px-3 py-2 rounded-md text-base font-medium transition duration-150"
+            >Portfolio</a
+          >
+          <a
+            href="services.html"
+            class="text-gray-600 hover:text-[#1C2E4A] hover:bg-gray-50 block px-3 py-2 rounded-md text-base font-medium transition duration-150"
+            >Services</a
+          >
+          <a
+            href="contact.html"
+            class="text-gray-600 hover:text-[#1C2E4A] hover:bg-gray-50 block px-3 py-2 rounded-md text-base font-medium transition duration-150"
+            >Contact</a
+          >
+          <div class="px-3 py-3 border-t border-gray-200 mt-3">
+            <a
+              href="tel:27683928066"
+              class="btn-green text-white block w-full text-center px-4 py-2 rounded-lg font-semibold transition duration-300 shadow-lg hover:bg-green-600"
+            >
+              <i class="fas fa-phone mr-2"></i> Call Agency
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+      const menuToggle = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const menuIcon = document.getElementById("menu-icon");
+
+      menuToggle.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+        menuToggle.setAttribute(
+          "aria-expanded",
+          menuToggle.getAttribute("aria-expanded") === "false"
+            ? "true"
+            : "false"
+        );
+        // Animate icon
+        menuIcon.classList.toggle("fa-bars");
+        menuIcon.classList.toggle("fa-times");
+      });
+
+      // Close menu when a link is clicked
+      const mobileMenuLinks = mobileMenu.querySelectorAll("a");
+      mobileMenuLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+          menuToggle.setAttribute("aria-expanded", "false");
+          menuIcon.classList.add("fa-bars");
+          menuIcon.classList.remove("fa-times");
+        });
+      });
+    </script>
+    <!-- Hero Section: Dark Background for a premium, bold feel -->
+    <section class="bg-dark-bg text-white py-20 sm:py-28 lg:py-36">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <!-- Hero Text Content -->
+          <div class="lg:col-span-6">
+            <p
+              class="text-[#bc9c22] font-semibold uppercase tracking-wider mb-3"
+            >
+              Your Dedicated Growth Partner
+            </p>
+            <h1
+              class="text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-tight mb-6"
+            >
+              The Agency Built for
+              <span class="text-[#bc9c22]">Small Businesses.</span>
+            </h1>
+            <p class="text-gray-300 text-xl mb-8 max-w-lg">
+              We provide high-impact, affordable design and marketing solutions,
+              specifically tailored to help local and growing small businesses
+              thrive in the digital world.
+            </p>
+            <div
+              class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4"
+            >
+              <!-- CTA 1: Added subtle pulse animation class -->
+              <a
+                href="/services.html"
+                class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-lg shadow-xl text-dark-bg bg-[#bc9c22] hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary transition duration-300 transform hover:scale-[1.02] animate-subtle-pulse"
+              >
+                See Our Packages
+              </a>
+              <a
+                href="/contact.html"
+                class="inline-flex items-center justify-center px-8 py-3 border border-[#bc9c22] text-base font-medium rounded-lg shadow-sm text-[#bc9c22] bg-transparent hover:bg-[#bc9c22] hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition duration-300"
+              >
+                Help my Business Grow
+              </a>
+            </div>
+          </div>
+
+          <!-- Hero Image Placeholder -->
+          <div class="lg:col-span-6 hidden lg:block">
+            <div
+              class="w-full h-96 bg-gray-700 rounded-2xl shadow-2xl flex items-center justify-center border-4 border-primary/50"
+            >
+              <img
+                src="https://placehold.co/600x400/1D4ED8/ffffff?text=HERO+IMAGE+PLACEHOLDER"
+                alt="Digital Agency Placeholder Image"
+                class="rounded-xl w-full h-full object-cover opacity-70"
+                onerror="this.onerror=null; this.src='https://placehold.co/600x400/1D4ED8/ffffff?text=HERO+IMAGE+PLACEHOLDER'"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust Bar / Client Logos Section -->
+    <section id="trust-bar" class="py-12 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p class="text-xl font-semibold text-gray-500 mb-8">
+          Trusted by
+          <span class="text-primary font-extrabold"
+            >20+ Happy Small Businesses</span
+          >, just like yours.
+        </p>
+        <!-- Logo Grid -->
+        <div
+          class="grid grid-cols-3 md:grid-cols-6 gap-8 items-center max-w-6xl mx-auto"
+        >
+          <!-- Logo 1 (Using grayscale and opacity for professional mock-up) -->
+          <div
+            class="flex justify-center items-center h-16 opacity-70 hover:opacity-100 transition duration-300 grayscale hover:grayscale-0"
+          >
+            <img
+              src="https://placehold.co/150x50/E5E7EB/1F2937?text=Client+A"
+              alt="Client Logo 1 Placeholder"
+              class="h-10"
+            />
+          </div>
+          <!-- Logo 2 -->
+          <div
+            class="flex justify-center items-center h-16 opacity-70 hover:opacity-100 transition duration-300 grayscale hover:grayscale-0"
+          >
+            <img
+              src="https://placehold.co/150x50/E5E7EB/1F2937?text=Client+B"
+              alt="Client Logo 2 Placeholder"
+              class="h-10"
+            />
+          </div>
+          <!-- Logo 3 -->
+          <div
+            class="flex justify-center items-center h-16 opacity-70 hover:opacity-100 transition duration-300 grayscale hover:grayscale-0"
+          >
+            <img
+              src="https://placehold.co/150x50/E5E7EB/1F2937?text=Client+C"
+              alt="Client Logo 3 Placeholder"
+              class="h-10"
+            />
+          </div>
+          <!-- Logo 4 -->
+          <div
+            class="flex justify-center items-center h-16 opacity-70 hover:opacity-100 transition duration-300 grayscale hover:grayscale-0"
+          >
+            <img
+              src="https://placehold.co/150x50/E5E7EB/1F2937?text=Client+D"
+              alt="Client Logo 4 Placeholder"
+              class="h-10"
+            />
+          </div>
+          <!-- Logo 5 -->
+          <div
+            class="flex justify-center items-center h-16 opacity-70 hover:opacity-100 transition duration-300 grayscale hover:grayscale-0"
+          >
+            <img
+              src="https://placehold.co/150x50/E5E7EB/1F2937?text=Client+E"
+              alt="Client Logo 5 Placeholder"
+              class="h-10"
+            />
+          </div>
+          <!-- Logo 6 -->
+          <div
+            class="flex justify-center items-center h-16 opacity-70 hover:opacity-100 transition duration-300 grayscale hover:grayscale-0"
+          >
+            <img
+              src="https://placehold.co/150x50/E5E7EB/1F2937?text=Client+F"
+              alt="Client Logo 6 Placeholder"
+              class="h-10"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-4xl font-extrabold text-gray-900 mb-4">
+          High-Impact Services for Small Business Growth
+        </h2>
+        <p class="text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
+          We focus on the essentials you need to look professional and win
+          customers, without the enterprise-level price tag.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Service 1: Web Design - Added transform hover:-translate-y-1 -->
+          <div
+            class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 border border-gray-100 hover:border-primary/50 transform hover:-translate-y-1"
+          >
+            <div class="text-primary mb-4">
+              <svg
+                class="w-10 h-10 mx-auto"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9.75 17L9.75 19H14.25V17M14.25 10V14.25H9.75V10M4.5 5.25H19.5V17.25C19.5 17.6642 19.1642 18 18.75 18H5.25C4.8358 18 4.5 17.6642 4.5 17.25V5.25ZM21 4.5V18.75C21 19.4404 20.4404 20 19.75 20H4.25C3.5596 20 3 19.4404 3 18.75V4.5C3 3.80964 3.5596 3.25 4.25 3.25H19.75C20.4404 3.25 21 3.80964 21 4.5Z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold mb-3 text-gray-900">
+              Custom Websites
+            </h3>
+            <p class="text-gray-600">
+              Get a fast, mobile-responsive websites that act as your 24/7 sales
+              engine. Perfect for new and expanding businesses.
+            </p>
+          </div>
+
+          <!-- Service 2: Branding - Added transform hover:-translate-y-1 -->
+          <div
+            class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 border border-gray-100 hover:border-primary/50 transform hover:-translate-y-1"
+          >
+            <div class="text-primary mb-4">
+              <svg
+                class="w-10 h-10 mx-auto"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 10V3L4 14H11V21L20 10H13Z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold mb-3 text-gray-900">
+              Graphic Design
+            </h3>
+            <p class="text-gray-600">
+              We design logos, brand guidelines, and marketing materials that
+              make your business look professional and trustworthy to customers.
+              People support businesses they trust.
+            </p>
+          </div>
+
+          <!-- Service 3: Marketing - Added transform hover:-translate-y-1 -->
+          <div
+            class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 border border-gray-100 hover:border-primary/50 transform hover:-translate-y-1"
+          >
+            <div class="text-primary mb-4">
+              <svg
+                class="w-10 h-10 mx-auto"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 8c1.657 0 3 .895 3 2s-1.343 2-3 2h-1v5a1 1 0 01-1 1H8a1 1 0 01-1-1v-5h-1c-1.657 0-3-.895-3-2s1.343-2 3-2h1V8a1 1 0 011-1h1a1 1 0 011 1v2h1z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold mb-3 text-gray-900">
+              Digital Marketing
+            </h3>
+            <p class="text-gray-600">
+              Advanced SEO, Google My Business optimization, and Social Media
+              Management to get you discovered by more local customers.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Us (Small Business Focus) Section -->
+    <section id="whyus" class="py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <!-- Image Placeholder -->
+          <div class="order-2 lg:order-1">
+            <div
+              class="w-full h-80 bg-gray-200 rounded-xl shadow-lg overflow-hidden flex items-center justify-center"
+            >
+              <img
+                src="https://placehold.co/700x500/F59E0B/000000?text=SMALL+BUSINESS+FOCUS+IMAGE"
+                alt="Team Collaboration Placeholder Image"
+                class="rounded-xl w-full h-full object-cover opacity-80"
+                onerror="this.onerror=null; this.src='https://placehold.co/700x500/F59E0B/000000?text=SMALL+BUSINESS+FOCUS+IMAGE'"
+              />
+            </div>
+          </div>
+
+          <!-- Text Content -->
+          <div class="order-1 lg:order-2">
+            <p class="text-primary font-semibold uppercase tracking-wider mb-3">
+              Our Core Difference
+            </p>
+            <h2 class="text-4xl font-extrabold text-gray-900 mb-6">
+              We Speak <strong class="text-primary">Small Business</strong>.
+            </h2>
+            <p class="text-gray-600 text-lg mb-6">
+              Unlike large agencies, we don't treat small businesses as an
+              afterthought. We understand the tight budgets, the need for quick
+              turnarounds, and the direct impact every rand has on your bottom
+              line. Our goal is simple: maximize your growth without maximizing
+              your spend.
+            </p>
+            <ul class="space-y-4 text-gray-700">
+              <li class="flex items-start">
+                <svg
+                  class="flex-shrink-0 w-6 h-6 text-primary mr-3 mt-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+                <span>Clear, fixed pricing—no hidden fees.</span>
+              </li>
+              <li class="flex items-start">
+                <svg
+                  class="flex-shrink-0 w-6 h-6 text-primary mr-3 mt-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+                <span>5 star rated services at an affordable price</span>
+              </li>
+              <li class="flex items-start">
+                <svg
+                  class="flex-shrink-0 w-6 h-6 text-primary mr-3 mt-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+                <span>40+ years combined experience at your service</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 md:py-24 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-extrabold text-gray-900">
+            Precision in Practice: Client Testimonials
+          </h2>
+          <p class="mt-4 text-xl text-gray-600">
+            Trust built on proven results and dedicated support for small
+            businesses.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Testimonial 1 -->
+          <div
+            class="bg-white p-8 rounded-xl shadow-xl border-t-4 border-t-primary transition duration-300 hover:shadow-2xl"
+          >
+            <i class="fas fa-quote-left text-3xl text-primary/40 mb-4"></i>
+            <p class="text-lg text-gray-700 italic mb-6">
+              "Precision Designs Agency delivered a website that is
+              professional, responsive, and easy for my customers to use. It
+              immediately increased our online booking conversions by 30%."
+            </p>
+            <div class="font-semibold text-gray-900">Peter M Teffo</div>
+            <div class="text-sm text-[#1C2E4A]">
+              HR Manager, Kumba Engineering
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div
+            class="bg-white p-8 rounded-xl shadow-xl border-t-4 border-t-primary transition duration-300 hover:shadow-2xl"
+          >
+            <i class="fas fa-quote-left text-3xl text-primary/40 mb-4"></i>
+            <p class="text-lg text-gray-700 italic mb-6">
+              "Excellent service and fast delivery! They understood exactly what
+              my small consulting firm needed to look credible online without
+              breaking the bank."
+            </p>
+            <div class="font-semibold text-gray-900">Jonas Senoamadi</div>
+            <div class="text-sm text-[#1C2E4A]">Director, BoRraTsela</div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div
+            class="bg-white p-8 rounded-xl shadow-xl border-t-4 border-t-primary transition duration-300 hover:shadow-2xl"
+          >
+            <i class="fas fa-quote-left text-3xl text-primary/40 mb-4"></i>
+            <p class="text-lg text-gray-700 italic mb-6">
+              "From concept to launch, the process was seamless. The custom
+              design provided us with the unique look we needed to stand out in
+              a crowded market."
+            </p>
+            <div class="font-semibold text-gray-900">Martha Mualadzi</div>
+            <div class="text-sm text-[#1C2E4A]">
+              Director, Lutendo Business Supplies
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA Section (Strip) -->
+    <section class="bg-primary py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">
+          Ready to Outshine the Competition?
+        </h2>
+        <p class="text-xl text-indigo-200 mb-8">
+          Let’s talk about your next big step in business growth.
+        </p>
+        <a
+          href="#contact"
+          class="inline-flex items-center justify-center px-10 py-4 border border-transparent text-lg font-bold rounded-lg shadow-2xl text-dark-bg bg-secondary hover:bg-yellow-600 focus:outline-none focus:ring-4 focus:ring-offset-2 focus:ring-secondary focus:ring-offset-primary transition duration-300 transform hover:scale-[1.05]"
+        >
+          Get Your Free Quote Now
+        </a>
+      </div>
+    </section>
+
+    <!-- NEW: FAQ Section -->
+    <section id="faqs" class="py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <p class="text-primary font-semibold uppercase tracking-wider mb-3">
+            Questions & Answers
+          </p>
+          <h2 class="text-4xl font-extrabold text-gray-900">
+            Frequently Asked Questions
+          </h2>
+        </div>
+
+        <div class="space-y-4">
+          <!-- FAQ 1 -->
+          <details
+            class="bg-gray-50 rounded-xl shadow-lg border border-gray-200 group transition duration-300 open:border-primary"
+          >
+            <summary
+              class="flex justify-between items-center p-5 cursor-pointer text-xl font-semibold text-gray-800 hover:text-primary transition duration-300"
+            >
+              <span>1. How much does a website cost?</span>
+              <svg
+                class="w-6 h-6 transform transition duration-300 group-open:rotate-180 text-primary"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </summary>
+            <div class="px-5 pb-5 text-gray-600 border-t border-gray-200 pt-3">
+              <p>
+                Our custom website projects start from only R1300 for a basic,
+                professional one-page site. Pricing scales depending on
+                complexity, features (e.g., e-commerce, custom integrations),
+                and the package you choose. We offer clear, fixed quotes
+                upfront.
+              </p>
+            </div>
+          </details>
+
+          <!-- FAQ 2 -->
+          <details
+            class="bg-gray-50 rounded-xl shadow-lg border border-gray-200 group transition duration-300 open:border-primary"
+          >
+            <summary
+              class="flex justify-between items-center p-5 cursor-pointer text-xl font-semibold text-gray-800 hover:text-primary transition duration-300"
+            >
+              <span>2. Do I need to pay monthly for the website?</span>
+              <svg
+                class="w-6 h-6 transform transition duration-300 group-open:rotate-180 text-primary"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </summary>
+            <div class="px-5 pb-5 text-gray-600 border-t border-gray-200 pt-3">
+              <p>
+                It depends on the package you select. For basic, simple sites,
+                you only pay the one-time build fee. However, most clients opt
+                for a small monthly fee that covers essential services like
+                hosting, security updates, and routine maintenance to ensure
+                your site stays fast and secure.
+              </p>
+            </div>
+          </details>
+
+          <!-- FAQ 3 -->
+          <details
+            class="bg-gray-50 rounded-xl shadow-lg border border-gray-200 group transition duration-300 open:border-primary"
+          >
+            <summary
+              class="flex justify-between items-center p-5 cursor-pointer text-xl font-semibold text-gray-800 hover:text-primary transition duration-300"
+            >
+              <span>3. How long does it take for my website to be done?</span>
+              <svg
+                class="w-6 h-6 transform transition duration-300 group-open:rotate-180 text-primary"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </summary>
+            <div class="px-5 pb-5 text-gray-600 border-t border-gray-200 pt-3">
+              <p>
+                Standard website delivery typically takes between 5 to 14
+                business days from the kick-off meeting, assuming all necessary
+                content (text, images, branding) is provided promptly. Larger or
+                more complex projects may take longer, but we always prioritize
+                speed.
+              </p>
+            </div>
+          </details>
+
+          <!-- FAQ 4 -->
+          <details
+            class="bg-gray-50 rounded-xl shadow-lg border border-gray-200 group transition duration-300 open:border-primary"
+          >
+            <summary
+              class="flex justify-between items-center p-5 cursor-pointer text-xl font-semibold text-gray-800 hover:text-primary transition duration-300"
+            >
+              <span>4. Can my website be updated after it's done?</span>
+              <svg
+                class="w-6 h-6 transform transition duration-300 group-open:rotate-180 text-primary"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </summary>
+            <div class="px-5 pb-5 text-gray-600 border-t border-gray-200 pt-3">
+              <p>
+                Yes, absolutely! We build all websites on easy-to-use platforms,
+                allowing you to manage simple content updates yourself. For
+                larger changes, technical updates, or ongoing strategy support,
+                we offer flexible maintenance and support packages.
+              </p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-white py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+          <!-- Company Info -->
+          <div>
+            <h3 class="text-2xl font-bold mb-4 text-[#4c84c4]">
+              Precision Designs
+            </h3>
+            <p class="text-gray-400">
+              Innovative, top-tier digital solutions for small and growing
+              businesses.
+            </p>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h4 class="text-xl font-semibold mb-4 text-primary">Quick Links</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="index.html"
+                  class="text-gray-400 hover:text-[#4c84c4] transition duration-150"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="portfolio.html"
+                  class="text-gray-400 hover:text-[#4c84c4] transition duration-150"
+                  >Portfolio</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services.html"
+                  class="text-gray-400 hover:text-[#4c84c4] transition duration-150"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  class="text-gray-400 hover:text-[#4c84c4] transition duration-150"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Services -->
+          <div>
+            <h4 class="text-xl font-semibold mb-4 text-primary">Services</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="services.html#websites"
+                  class="text-gray-400 hover:text-[#4c84c4] transition duration-150"
+                  >Web Design & Development</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services.html#designs"
+                  class="text-gray-400 hover:text-[#4c84c4] transition duration-150"
+                  >Graphic Design</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services.html#compliance"
+                  class="text-gray-400 hover:text-[#4c84c4] transition duration-150"
+                  >Business Compliance</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services.html#marketing"
+                  class="text-gray-400 hover:text-[#4c84c4] transition duration-150"
+                  >Digital Marketing</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div>
+            <h4 class="text-xl font-semibold mb-4 text-primary">
+              Get in Touch
+            </h4>
+            <a
+              href="mailto:info@precisiondesignsagency.com"
+              class="text-gray-400 mb-2"
+            >
+              <i class="fas fa-envelope mr-2 text-primary"></i>
+              info@precisiondesignsagency.com
+            </a>
+            <a href="tel:27683928066" class="block text-gray-400 mb-2">
+              <i class="fas fa-phone mr-2 text-primary"></i> +27 68 392 8066
+            </a>
+            <div class="flex space-x-4 mt-4">
+              <a href="#" class="text-gray-400 hover:text-[#4c84c4]"
+                ><i class="fab fa-facebook-f text-2xl"></i
+              ></a>
+              <a href="#" class="text-gray-400 hover:text-[#4c84c4]"
+                ><i class="fab fa-twitter text-2xl"></i
+              ></a>
+              <a href="#" class="text-gray-400 hover:text-[#4c84c4]"
+                ><i class="fab fa-linkedin-in text-2xl"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="mt-12 pt-8 border-t border-gray-700 text-center text-gray-500"
+        >
+          &copy; 2025 Precision Designs Agency. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating WhatsApp Icon (Consistent) -->
+    <a
+      href="https://wa.me/27780499351"
+      target="_blank"
+      class="fixed bottom-6 right-6 z-50 p-4 bg-green-500 text-white rounded-full shadow-2xl transition duration-300 hover:bg-green-600 hover:scale-105"
+      aria-label="Chat on WhatsApp"
+    >
+      <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
+  </body>
+</html>
