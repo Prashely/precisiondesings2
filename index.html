@@ -86,8 +86,29 @@
         background-color: #eec50f;
       }
       .input-focus:focus {
-        border-color: #4c84c4;
-        box-shadow: 0 0 0 3px rgba(76, 132, 196, 0.5);
+        border-color: #bc9c22;
+        box-shadow: 0 0 0 3px rgba(188, 156, 34, 0.5);
+      }
+      /* Fixed Background CTA Section */
+      .cta-fixed-bg {
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        position: relative;
+      }
+      .cta-fixed-bg::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(10, 29, 55, 0.5);
+        z-index: 1;
+      }
+      .cta-fixed-bg > div {
+        position: relative;
+        z-index: 2;
       }
     </style>
   </head>
@@ -98,10 +119,15 @@
         <div class="flex justify-between items-center h-20">
           <!-- Logo: Precision Designs Agency -->
           <div class="flex-shrink-0">
-            <span class="text-3xl font-extrabold text-[#1C2E4A]"
-              >Precision Designs</span
-            >
+            <a href="index.html" class="block">
+              <img
+                src="/public/pda/logob.svg"
+                alt="Precision Designs Agency Logo"
+                class="h-12 w-auto md:h-20"
+              />
+            </a>
           </div>
+
           <!-- Navigation Links (Desktop) -->
           <nav class="hidden md:block">
             <div class="ml-10 flex items-baseline space-x-4">
@@ -127,6 +153,7 @@
               >
             </div>
           </nav>
+
           <!-- CTA Button (Desktop) -->
           <a
             href="tel:27683928066"
@@ -134,10 +161,11 @@
           >
             <i class="fas fa-phone mr-2"></i> Call Agency
           </a>
+
           <!-- Hamburger Menu Button (Mobile) -->
           <button
             id="menu-toggle"
-            class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-[#1C2E4A] hover:text-[#4c84c4] transition duration-150 focus:outline-none"
+            class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-[#1C2E4A] hover:text-primary/80 transition duration-150 focus:outline-none"
             aria-expanded="false"
             aria-label="Open menu"
           >
@@ -242,7 +270,7 @@
               <!-- CTA 1: Added subtle pulse animation class -->
               <a
                 href="/services.html"
-                class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-lg shadow-xl text-dark-bg bg-[#bc9c22] hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary transition duration-300 transform hover:scale-[1.02] animate-subtle-pulse"
+                class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-lg shadow-xl text-dark-bg bg-primary hover:bg-primary/80 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary transition duration-300 transform hover:scale-[1.02] animate-subtle-pulse"
               >
                 See Our Packages
               </a>
@@ -288,9 +316,11 @@
           <!-- Logo 1 (Using grayscale and opacity for professional mock-up) -->
           <div
             class="flex justify-center items-center h-16 opacity-70 hover:opacity-100 transition duration-300 grayscale hover:grayscale-0"
+            style="color: #bc9c22"
           >
+            >
             <img
-              src="https://placehold.co/150x50/E5E7EB/1F2937?text=Client+A"
+              src="/public/logos/3.png"
               alt="Client Logo 1 Placeholder"
               class="h-10"
             />
@@ -300,7 +330,7 @@
             class="flex justify-center items-center h-16 opacity-70 hover:opacity-100 transition duration-300 grayscale hover:grayscale-0"
           >
             <img
-              src="https://placehold.co/150x50/E5E7EB/1F2937?text=Client+B"
+              src="/public/logos/7.png"
               alt="Client Logo 2 Placeholder"
               class="h-10"
             />
@@ -310,7 +340,7 @@
             class="flex justify-center items-center h-16 opacity-70 hover:opacity-100 transition duration-300 grayscale hover:grayscale-0"
           >
             <img
-              src="https://placehold.co/150x50/E5E7EB/1F2937?text=Client+C"
+              src="/public/logos/6.png"
               alt="Client Logo 3 Placeholder"
               class="h-10"
             />
@@ -320,7 +350,7 @@
             class="flex justify-center items-center h-16 opacity-70 hover:opacity-100 transition duration-300 grayscale hover:grayscale-0"
           >
             <img
-              src="https://placehold.co/150x50/E5E7EB/1F2937?text=Client+D"
+              src="/public/logos/5.png"
               alt="Client Logo 4 Placeholder"
               class="h-10"
             />
@@ -330,7 +360,7 @@
             class="flex justify-center items-center h-16 opacity-70 hover:opacity-100 transition duration-300 grayscale hover:grayscale-0"
           >
             <img
-              src="https://placehold.co/150x50/E5E7EB/1F2937?text=Client+E"
+              src="/public/logos/8.png"
               alt="Client Logo 5 Placeholder"
               class="h-10"
             />
@@ -340,7 +370,7 @@
             class="flex justify-center items-center h-16 opacity-70 hover:opacity-100 transition duration-300 grayscale hover:grayscale-0"
           >
             <img
-              src="https://placehold.co/150x50/E5E7EB/1F2937?text=Client+F"
+              src="/public/logos/4.png"
               alt="Client Logo 6 Placeholder"
               class="h-10"
             />
@@ -353,7 +383,8 @@
     <section id="services" class="py-20 bg-gray-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 class="text-4xl font-extrabold text-gray-900 mb-4">
-          High-Impact Services for Small Business Growth
+          High-Impact Services for
+          <strong class="text-primary">Small Business</strong> Growth
         </h2>
         <p class="text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
           We focus on the essentials you need to look professional and win
@@ -462,7 +493,7 @@
               class="w-full h-80 bg-gray-200 rounded-xl shadow-lg overflow-hidden flex items-center justify-center"
             >
               <img
-                src="https://placehold.co/700x500/F59E0B/000000?text=SMALL+BUSINESS+FOCUS+IMAGE"
+                src="/public//images/home.jpg"
                 alt="Team Collaboration Placeholder Image"
                 class="rounded-xl w-full h-full object-cover opacity-80"
                 onerror="this.onerror=null; this.src='https://placehold.co/700x500/F59E0B/000000?text=SMALL+BUSINESS+FOCUS+IMAGE'"
@@ -548,7 +579,8 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
           <h2 class="text-4xl font-extrabold text-gray-900">
-            Precision in Practice: Client Testimonials
+            Precision in Practice:
+            <strong class="text-primary">Client Testimonials</strong>
           </h2>
           <p class="mt-4 text-xl text-gray-600">
             Trust built on proven results and dedicated support for small
@@ -607,17 +639,20 @@
     </section>
 
     <!-- Final CTA Section (Strip) -->
-    <section class="bg-primary py-16">
+    <section
+      class="cta-fixed-bg py-16"
+      style="background: url('/public/images/home-bg.jpg') fixed center/cover"
+    >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">
           Ready to Outshine the Competition?
         </h2>
-        <p class="text-xl text-indigo-200 mb-8">
-          Let’s talk about your next big step in business growth.
+        <p class="text-xl text-white mb-8">
+          Let's talk about your next big step in business growth.
         </p>
         <a
-          href="#contact"
-          class="inline-flex items-center justify-center px-10 py-4 border border-transparent text-lg font-bold rounded-lg shadow-2xl text-dark-bg bg-secondary hover:bg-yellow-600 focus:outline-none focus:ring-4 focus:ring-offset-2 focus:ring-secondary focus:ring-offset-primary transition duration-300 transform hover:scale-[1.05]"
+          href="/contact.html"
+          class="inline-flex items-center justify-center px-10 py-4 border border-transparent text-lg font-bold rounded-lg shadow-2xl text-white bg-[#0a1d37] hover:bg-opacity-90 focus:outline-none focus:ring-4 focus:ring-offset-2 focus:ring-[#bc9c22] focus:ring-offset-[#bc9c22] transition duration-300 transform hover:scale-[1.05]"
         >
           Get Your Free Quote Now
         </a>
@@ -777,14 +812,15 @@
 
     <!-- Footer -->
     <footer class="bg-secondary text-white py-12">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-2">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
           <!-- Company Info -->
           <div>
-            <h3 class="text-2xl font-bold mb-4 text-[#4c84c4]">
-              Precision Designs
-            </h3>
-            <p class="text-gray-400">
+            <img
+              class="text-2xl font-bold text-[#4c84c4]"
+              src="/public/pda/logow.svg"
+            />
+            <p class="text-white">
               Innovative, top-tier digital solutions for small and growing
               businesses.
             </p>
@@ -797,28 +833,28 @@
               <li>
                 <a
                   href="index.html"
-                  class="text-gray-400 hover:text-[#4c84c4] transition duration-150"
+                  class="text-white hover:text-primary/80 transition duration-150"
                   >Home</a
                 >
               </li>
               <li>
                 <a
                   href="portfolio.html"
-                  class="text-gray-400 hover:text-[#4c84c4] transition duration-150"
+                  class="text-white hover:text-primary/80 transition duration-150"
                   >Portfolio</a
                 >
               </li>
               <li>
                 <a
                   href="services.html"
-                  class="text-gray-400 hover:text-[#4c84c4] transition duration-150"
+                  class="text-white hover:text-primary/80 transition duration-150"
                   >Services</a
                 >
               </li>
               <li>
                 <a
                   href="contact.html"
-                  class="text-gray-400 hover:text-[#4c84c4] transition duration-150"
+                  class="text-white hover:text-primary/80 transition duration-150"
                   >Contact</a
                 >
               </li>
@@ -832,28 +868,28 @@
               <li>
                 <a
                   href="services.html#websites"
-                  class="text-gray-400 hover:text-[#4c84c4] transition duration-150"
+                  class="text-white hover:text-primary/80 transition duration-150"
                   >Web Design & Development</a
                 >
               </li>
               <li>
                 <a
                   href="services.html#designs"
-                  class="text-gray-400 hover:text-[#4c84c4] transition duration-150"
+                  class="text-white hover:text-primary/80 transition duration-150"
                   >Graphic Design</a
                 >
               </li>
               <li>
                 <a
                   href="services.html#compliance"
-                  class="text-gray-400 hover:text-[#4c84c4] transition duration-150"
+                  class="text-white hover:text-primary/80 transition duration-150"
                   >Business Compliance</a
                 >
               </li>
               <li>
                 <a
                   href="services.html#marketing"
-                  class="text-gray-400 hover:text-[#4c84c4] transition duration-150"
+                  class="text-white hover:text-primary/80 transition duration-150"
                   >Digital Marketing</a
                 >
               </li>
@@ -867,22 +903,22 @@
             </h4>
             <a
               href="mailto:info@precisiondesignsagency.com"
-              class="text-gray-400 mb-2"
+              class="text-white mb-2"
             >
               <i class="fas fa-envelope mr-2 text-primary"></i>
               info@precisiondesignsagency.com
             </a>
-            <a href="tel:27683928066" class="block text-gray-400 mb-2">
+            <a href="tel:27683928066" class="block text-white mb-2">
               <i class="fas fa-phone mr-2 text-primary"></i> +27 68 392 8066
             </a>
             <div class="flex space-x-4 mt-4">
-              <a href="#" class="text-gray-400 hover:text-[#4c84c4]"
+              <a href="#" class="text-white hover:text-primary/80"
                 ><i class="fab fa-facebook-f text-2xl"></i
               ></a>
-              <a href="#" class="text-gray-400 hover:text-[#4c84c4]"
+              <a href="#" class="text-white hover:text-primary/80"
                 ><i class="fab fa-twitter text-2xl"></i
               ></a>
-              <a href="#" class="text-gray-400 hover:text-[#4c84c4]"
+              <a href="#" class="text-white hover:text-primary/80"
                 ><i class="fab fa-linkedin-in text-2xl"></i
               ></a>
             </div>

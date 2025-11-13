@@ -13,6 +13,24 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
       rel="stylesheet"
     />
+        <!-- Configure Tailwind and the Inter font -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#bc9c22", // Dark Blue
+              secondary: "#0a1d37", // Amber/Gold
+              "dark-bg": "#0F172A", // Slate 900
+              whatsapp: "#25D366", // WhatsApp Green
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
     <style>
       body {
         font-family: "Inter", sans-serif;
@@ -102,7 +120,7 @@
           <!-- Hamburger Menu Button (Mobile) -->
           <button
             id="menu-toggle"
-            class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-[#1C2E4A] hover:text-[#4c84c4] transition duration-150 focus:outline-none"
+            class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-[#1C2E4A] hover:text-primary/80 transition duration-150 focus:outline-none"
             aria-expanded="false"
             aria-label="Open menu"
           >
@@ -890,7 +908,7 @@
         </div>
 
         <div class="text-center mt-8">
-          <p class="text-lg text-gray-400">
+          <p class="text-lg text-white">
             <i class="fas fa-lightbulb mr-2 text-yellow-400"></i> Placeholders
             will be replaced with actual client logos upon project completion.
           </p>
@@ -899,15 +917,16 @@
     </section>
 
     <!-- Footer (Consistent) -->
-    <footer id="contact" class="bg-[#1C2E4A] text-white py-12">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+    <footer class="bg-secondary text-white py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-2">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
           <!-- Company Info -->
           <div>
-            <h3 class="text-2xl font-bold mb-4 text-[#4c84c4]">
-              Precision Designs
-            </h3>
-            <p class="text-gray-400">
+            <img
+              class="text-2xl font-bold text-[#4c84c4]"
+              src="/public/pda/logow.svg"
+            />
+            <p class="text-white">
               Innovative, top-tier digital solutions for small and growing
               businesses.
             </p>
@@ -915,33 +934,33 @@
 
           <!-- Quick Links -->
           <div>
-            <h4 class="text-xl font-semibold mb-4 text-white">Quick Links</h4>
+            <h4 class="text-xl font-semibold mb-4 text-primary">Quick Links</h4>
             <ul class="space-y-2">
               <li>
                 <a
                   href="index.html"
-                  class="text-gray-400 hover:text-[#4c84c4] transition duration-150"
+                  class="text-white hover:text-primary/80 transition duration-150"
                   >Home</a
                 >
               </li>
               <li>
                 <a
                   href="portfolio.html"
-                  class="text-gray-400 hover:text-[#4c84c4] transition duration-150"
+                  class="text-white hover:text-primary/80 transition duration-150"
                   >Portfolio</a
                 >
               </li>
               <li>
                 <a
                   href="services.html"
-                  class="text-gray-400 hover:text-[#4c84c4] transition duration-150"
+                  class="text-white hover:text-primary/80 transition duration-150"
                   >Services</a
                 >
               </li>
               <li>
                 <a
                   href="contact.html"
-                  class="text-gray-400 hover:text-[#4c84c4] transition duration-150"
+                  class="text-white hover:text-primary/80 transition duration-150"
                   >Contact</a
                 >
               </li>
@@ -950,33 +969,33 @@
 
           <!-- Services -->
           <div>
-            <h4 class="text-xl font-semibold mb-4 text-white">Services</h4>
+            <h4 class="text-xl font-semibold mb-4 text-primary">Services</h4>
             <ul class="space-y-2">
               <li>
                 <a
-                  href="#websites"
-                  class="text-gray-400 hover:text-[#4c84c4] transition duration-150"
+                  href="services.html#websites"
+                  class="text-white hover:text-primary/80 transition duration-150"
                   >Web Design & Development</a
                 >
               </li>
               <li>
                 <a
-                  href="#designs"
-                  class="text-gray-400 hover:text-[#4c84c4] transition duration-150"
+                  href="services.html#designs"
+                  class="text-white hover:text-primary/80 transition duration-150"
                   >Graphic Design</a
                 >
               </li>
               <li>
                 <a
-                  href="#compliance"
-                  class="text-gray-400 hover:text-[#4c84c4] transition duration-150"
+                  href="services.html#compliance"
+                  class="text-white hover:text-primary/80 transition duration-150"
                   >Business Compliance</a
                 >
               </li>
               <li>
                 <a
-                  href="#marketing"
-                  class="text-gray-400 hover:text-[#4c84c4] transition duration-150"
+                  href="services.html#marketing"
+                  class="text-white hover:text-primary/80 transition duration-150"
                   >Digital Marketing</a
                 >
               </li>
@@ -985,25 +1004,27 @@
 
           <!-- Contact Info -->
           <div>
-            <h4 class="text-xl font-semibold mb-4 text-white">Get in Touch</h4>
+            <h4 class="text-xl font-semibold mb-4 text-primary">
+              Get in Touch
+            </h4>
             <a
               href="mailto:info@precisiondesignsagency.com"
-              class="text-gray-400 mb-2"
+              class="text-white mb-2"
             >
-              <i class="fas fa-envelope mr-2 text-[#4c84c4]"></i>
+              <i class="fas fa-envelope mr-2 text-primary"></i>
               info@precisiondesignsagency.com
             </a>
-            <a href="tel:27683928066" class="block text-gray-400 mb-2">
-              <i class="fas fa-phone mr-2 text-[#4c84c4]"></i> +27 68 392 8066
+            <a href="tel:27683928066" class="block text-white mb-2">
+              <i class="fas fa-phone mr-2 text-primary"></i> +27 68 392 8066
             </a>
             <div class="flex space-x-4 mt-4">
-              <a href="#" class="text-gray-400 hover:text-[#4c84c4]"
+              <a href="#" class="text-white hover:text-primary/80"
                 ><i class="fab fa-facebook-f text-2xl"></i
               ></a>
-              <a href="#" class="text-gray-400 hover:text-[#4c84c4]"
+              <a href="#" class="text-white hover:text-primary/80"
                 ><i class="fab fa-twitter text-2xl"></i
               ></a>
-              <a href="#" class="text-gray-400 hover:text-[#4c84c4]"
+              <a href="#" class="text-white hover:text-primary/80"
                 ><i class="fab fa-linkedin-in text-2xl"></i
               ></a>
             </div>
