@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Services & Pricing - Precision Designs Agency</title>
+    <title>Services | Precision Designs Agency</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
@@ -159,19 +159,22 @@
       });
     </script>
 
-    <!-- Hero Section -->
-    <section class="bg-primary text-white py-20 md:py-32">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 class="text-4xl sm:text-6xl font-extrabold mb-4">
-          Our Comprehensive Service Offerings
-        </h1>
-        <p class="text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto">
-          Designed specifically for <strong>small - businesses' growth</strong>,
-          our services combine digital marketing, web development, graphic
-          design, and essential compliance services see below...
-        </p>
-      </div>
-    </section>
+<!-- Hero Section -->
+<section 
+  class="bg-primary text-white py-20 md:py-32 relative"
+  style="background: linear-gradient(rgba(10, 29, 55, 0.8), rgba(10, 29, 55, 0.8)), url('public/images/services.jpg') center/cover"
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+    <h1 class="text-4xl sm:text-6xl font-extrabold mb-4">
+      Our Comprehensive Service Offerings
+    </h1>
+    <p class="text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto">
+      Designed specifically for <strong>small - businesses' growth</strong>,
+      our services combine digital marketing, web development, graphic
+      design, and essential compliance services see below...
+    </p>
+  </div>
+</section>
 
     <!-- 1. Website Design & Development Tiers (Pricing Table) -->
     <section id="websites" class="py-16 md:py-24 bg-white">
@@ -189,14 +192,14 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
           <!-- Tier 1: Foundation (R1300) -->
           <div
-            class="bg-gray-50 p-8 rounded-xl shadow-lg h-full flex flex-col justify-between transition duration-300 hover:shadow-2xl"
+            class="bg-gray-50 p-8 rounded-xl shadow-lg h-full border-2 border-primary flex flex-col justify-between transition duration-300 hover:shadow-2xl"
           >
             <div>
               <h3 class="text-2xl font-bold color-primary mb-2">
                 The Starter Package
               </h3>
-              <p class="text-5xl font-extrabold text-green-600 mb-6">
-                R1300<span class="text-lg font-medium text-gray-500">
+              <p class="text-5xl font-extrabold text-secondary mb-6">
+                R1300<span class="text-lg font-medium text-primary">
                   / Once-off</span
                 >
               </p>
@@ -220,7 +223,7 @@
                 </li>
                 <li class="flex items-center">
                   <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                  <strong>No Monthly Fees</strong>(100% ownership)
+                  <strong>No Monthly Fees</strong>(100%)
                 </li>
                 <li class="flex items-center">
                   <i class="fas fa-check-circle text-green-500 mr-3"></i> Social
@@ -238,11 +241,11 @@
 
           <!-- Tier 2: Momentum (R2150) - HIGHLIGHTED -->
           <div
-            class="bg-white p-10 rounded-xl highlight-card z-10 h-full flex flex-col justify-between"
+            class="bg-white p-10 rounded-xl highlight-card z-10 h-full flex flex-col justify-between border-2 border-secondary"
           >
             <div class="text-center mb-6">
               <span
-                class="inline-block bg-[#4c84c4] text-white text-sm font-bold px-4 py-1 rounded-full uppercase tracking-wider"
+                class="inline-block bg-secondary text-white text-sm font-bold px-4 py-1 rounded-full uppercase tracking-wider"
                 >Most Popular</span
               >
             </div>
@@ -251,7 +254,7 @@
                 The Premium Package
               </h3>
               <p class="text-6xl font-extrabold text-[#1C2E4A] mb-6">
-                R2150<span class="text-lg font-medium text-gray-600">
+                R2150<span class="text-lg font-medium text-primary">
                   / Once-off</span
                 >
               </p>
@@ -296,7 +299,7 @@
             </div>
             <a
                 href="https://wa.me/27780499351?text=Hi,%20I'm%20interested%20in%20the%20Premium%20package%20and%20I%20would%20like%20to%20hear%20more."
-              class="w-full text-center py-4 btn-green text-white text-xl font-bold rounded-lg mt-4 shadow-xl hover:shadow-2xl transition duration-300"
+              class="w-full text-center py-4 bg-secondary text-white text-xl font-bold rounded-lg mt-4 shadow-xl hover:shadow-2xl transition duration-300"
             >
               Start with Premium
             </a>
@@ -304,14 +307,14 @@
 
           <!-- Tier 3: Growth (Custom) -->
           <div
-            class="bg-gray-50 p-8 rounded-xl shadow-lg h-full flex flex-col justify-between transition duration-300 hover:shadow-2xl"
+            class="bg-gray-50 p-8 rounded-xl shadow-lg h-full flex flex-col border-2 border-primary justify-between transition duration-300 hover:shadow-2xl"
           >
             <div>
-              <h3 class="text-2xl font-bold color-primary mb-2">
+              <h3 class="text-2xl font-bold text-secondary mb-2">
                 The Professional Vision
               </h3>
-              <p class="text-5xl font-extrabold text-gray-900 mb-6">
-                Custom<span class="text-lg font-medium text-gray-500">
+              <p class="text-5xl font-extrabold text-secondary mb-6">
+                Custom<span class="text-lg font-medium text-primary">
                   / Let's chat</span
                 >
               </p>
@@ -587,7 +590,7 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
           <h2 class="text-4xl font-extrabold color-primary mb-4">
-            Essential Business & Compliance Support
+            Essential Business & <span class="text-primary">Compliance</span> Support
           </h2>
           <p class="text-xl text-gray-600 max-w-3xl mx-auto">
             Focus on growing your business; we handle the necessary paperwork
@@ -597,55 +600,55 @@
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
           <div
-            class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-b-4 border-b-sky-500"
+            class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-b-4 border-b-primary"
           >
-            <i class="fas fa-building text-3xl text-sky-500 mb-3"></i>
+            <i class="fas fa-building text-3xl text-primary mb-3"></i>
             <h4 class="text-xl font-bold color-primary mb-1">
               Company Registration & BBB-EE
             </h4>
-            <p class="text-3xl font-extrabold text-sky-600">R600</p>
+            <p class="text-3xl font-extrabold text-primary">R600</p>
           </div>
 
           <div
-            class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-b-4 border-b-sky-500"
+            class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-b-4 border-b-primary"
           >
             <i
-              class="fas fa-file-invoice-dollar text-3xl text-sky-500 mb-3"
+              class="fas fa-file-invoice-dollar text-3xl text-primary mb-3"
             ></i>
             <h4 class="text-xl font-bold color-primary mb-1">
               SARS TAX CLEARANCE
             </h4>
-            <p class="text-3xl font-extrabold text-sky-600">R450</p>
+            <p class="text-3xl font-extrabold text-primary">R450</p>
           </div>
 
           <div
-            class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-b-4 border-b-sky-500"
+            class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-b-4 border-b-primary"
           >
-            <i class="fas fa-user-tie text-3xl text-sky-500 mb-3"></i>
+            <i class="fas fa-user-tie text-3xl text-primary mb-3"></i>
             <h4 class="text-xl font-bold color-primary mb-1">
               SARS TAX REPRESENTATIVE
             </h4>
-            <p class="text-3xl font-extrabold text-sky-600">R150</p>
+            <p class="text-3xl font-extrabold text-primary">R150</p>
           </div>
 
           <div
-            class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-b-4 border-b-sky-500"
+            class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-b-4 border-b-primary"
           >
-            <i class="fas fa-address-card text-3xl text-sky-500 mb-3"></i>
+            <i class="fas fa-address-card text-3xl text-primary mb-3"></i>
             <h4 class="text-xl font-bold color-primary mb-1">
               Company Profile Development
             </h4>
-            <p class="text-3xl font-extrabold text-sky-600">R450</p>
+            <p class="text-3xl font-extrabold text-primary">R450</p>
           </div>
 
           <div
-            class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-b-4 border-b-sky-500"
+            class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-b-4 border-b-primary"
           >
-            <i class="fas fa-database text-3xl text-sky-500 mb-3"></i>
+            <i class="fas fa-database text-3xl text-primary mb-3"></i>
             <h4 class="text-xl font-bold color-primary mb-1">
               Central Supplier Database (CSD)
             </h4>
-            <p class="text-3xl font-extrabold text-sky-600">R200</p>
+            <p class="text-3xl font-extrabold text-primary">R200</p>
           </div>
         </div>
       </div>
@@ -806,16 +809,12 @@
     </section> -->
 
     <!-- 5. Small Business Client Showcase (Logo Carousel Placeholder) -->
-    <section class="py-16 md:py-24 bg-primary text-white">
+    <section class="py-16 md:py-12 bg-white text-secondary">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-          <h2 class="text-4xl font-extrabold text-white mb-4">
+        <div class="text-center">
+          <h2 class="text-4xl font-extrabold text-secondary mb-1">
             Small Businesses We've Assisted
           </h2>
-          <p class="text-xl text-gray-300">
-            Proudly helping local enterprises establish and grow their digital
-            footprint.
-          </p>
         </div>
 
         <!-- Logo Carousel Placeholder -->
@@ -828,7 +827,7 @@
             title="Client 1"
           >
             <img
-              src="https://placehold.co/128x128/ffffff/1C2E4A?text=LOGO+A"
+              src="/public/logos/4.png"
               class="w-full h-full object-contain rounded-lg"
             />
           </div>
@@ -837,7 +836,7 @@
             title="Client 2"
           >
             <img
-              src="https://placehold.co/128x128/ffffff/1C2E4A?text=LOGO+B"
+              src="/public//logos/7.png"
               class="w-full h-full object-contain rounded-lg"
             />
           </div>
@@ -846,7 +845,7 @@
             title="Client 3"
           >
             <img
-              src="https://placehold.co/128x128/ffffff/1C2E4A?text=LOGO+C"
+              src="/public/logos/6.png"
               class="w-full h-full object-contain rounded-lg"
             />
           </div>
@@ -855,7 +854,7 @@
             title="Client 4"
           >
             <img
-              src="https://placehold.co/128x128/ffffff/1C2E4A?text=LOGO+D"
+              src="/public/logos/5.png"
               class="w-full h-full object-contain rounded-lg"
             />
           </div>
@@ -864,23 +863,15 @@
             title="Client 5"
           >
             <img
-              src="https://placehold.co/128x128/ffffff/1C2E4A?text=LOGO+E"
+              src="/public/logos/8.png"
               class="w-full h-full object-contain rounded-lg"
             />
           </div>
         </div>
-
-        <div class="text-center mt-8">
-          <p class="text-lg text-white">
-            <i class="fas fa-lightbulb mr-2 text-yellow-400"></i> Placeholders
-            will be replaced with actual client logos upon project completion.
-          </p>
-        </div>
       </div>
     </section>
-
     <!-- Footer (Consistent) -->
-    <footer class="bg-secondary text-white py-12">
+    <footer class="bg-secondary text-white py-8">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-2">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
           <!-- Company Info -->
