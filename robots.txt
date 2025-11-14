@@ -1,0 +1,8 @@
+# robots.txt
+User-agent: *
+Allow: /
+Sitemap: https://precisiondesignsagency.com/sitemap.xml
+
+# Block unnecessary pages
+Disallow: /private/
+Disallow: /tmp/
