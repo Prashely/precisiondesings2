@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+@keyframes subtle-pulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.7);
+    }
+
+    50% {
+        box-shadow: 0 0 0 5px rgba(245, 158, 11, 0);
+    }
+}
+
+.animate-subtle-pulse {
+    animation: subtle-pulse 2s infinite cubic-bezier(0.4, 0, 0.6, 1);
+}
+
+/* Styling for the Floating WhatsApp Button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Agency Brand Colors */
+.color-primary {
+    color: #1c2e4a;
+}
+
+.bg-primary {
+    background-color: #1c2e4a;
+}
+
+.color-secondary {
+    color: #4c84c4;
+}
+
+.bg-secondary {
+    background-color: #bc9c22;
+}
+
+.btn-green {
+    background-color: #bc9c22;
+}
+
+.btn-green:hover {
+    background-color: #eec50f;
+}
+
+.input-focus:focus {
+    border-color: #bc9c22;
+    box-shadow: 0 0 0 3px rgba(188, 156, 34, 0.5);
+}
+
+/* Fixed Background CTA Section */
+.cta-fixed-bg {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.cta-fixed-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(10, 29, 55, 0.5);
+    z-index: 1;
+}
+
+.cta-fixed-bg>div {
+    position: relative;
+    z-index: 2;
+}
+
+/* Smooth transitions for interactive elements */
+.transition-smooth {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Custom focus states */
+.focus-primary:focus {
+    outline: 2px solid #bc9c22;
+    outline-offset: 2px;
+}
+
+/* Hover effects */
+.hover-lift:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Text selection */
+::selection {
+    background-color: rgba(188, 156, 34, 0.3);
+}
+
+::-moz-selection {
+    background-color: rgba(188, 156, 34, 0.3);
+}

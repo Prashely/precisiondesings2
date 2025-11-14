@@ -13,6 +13,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="global.css" />
     <!-- Configure Tailwind and the Inter font -->
     <script>
       tailwind.config = {
@@ -31,35 +32,6 @@
         },
       };
     </script>
-    <style>
-      body {
-        font-family: "Inter", sans-serif;
-        background-color: #f7f8f9;
-      }
-      /* Agency Brand Colors */
-      .color-primary {
-        color: #1c2e4a;
-      }
-      .bg-primary {
-        background-color: #1c2e4a;
-      }
-      .color-secondary {
-        color: #4c84c4;
-      }
-      .bg-secondary {
-        background-color: #4c84c4;
-      }
-      .btn-green {
-        background-color: #10b981;
-      }
-      .btn-green:hover {
-        background-color: #059669;
-      }
-      .input-focus:focus {
-        border-color: #4c84c4;
-        box-shadow: 0 0 0 3px rgba(76, 132, 196, 0.5);
-      }
-    </style>
   </head>
   <body>
     <!-- Navigation Header (Consistent) -->
@@ -68,9 +40,13 @@
         <div class="flex justify-between items-center h-20">
           <!-- Logo: Precision Designs Agency -->
           <div class="flex-shrink-0">
-            <span class="text-3xl font-extrabold text-[#1C2E4A]"
-              >Precision Designs</span
-            >
+            <a href="index.html" class="block">
+              <img
+                src="/public/pda/logob.svg"
+                alt="Precision Designs Agency Logo"
+                class="h-16 w-auto md:h-20"
+              />
+            </a>
           </div>
           <!-- Navigation Links (Desktop) -->
           <nav class="hidden md:block">
@@ -188,6 +164,13 @@
     <!-- Hero Section -->
     <section
       class="bg-primary text-white py-20 md:py-32 relative overflow-hidden"
+      style="
+        background: linear-gradient(
+            rgba(10, 29, 55, 0.8),
+            rgba(10, 29, 55, 0.8)
+          ),
+          url('public//images/contact.jpg') center/cover;
+      "
     >
       <div
         class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10"
@@ -200,7 +183,7 @@
           today.
         </p>
         <!-- Image Placeholder in Hero -->
-        <div
+        <!-- <div
           class="hidden lg:block w-full max-w-lg mx-auto rounded-xl shadow-2xl overflow-hidden"
         >
           <img
@@ -208,7 +191,7 @@
             alt="Placeholder image of a team collaborating on a design project"
             class="w-full h-auto object-cover"
           />
-        </div>
+        </div> -->
       </div>
     </section>
 
@@ -227,16 +210,16 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <!-- 1. Email Card -->
           <div
-            class="bg-white p-8 rounded-xl shadow-xl text-center items-center justify-center border-t-4 border-t-secondary transition duration-300 hover:shadow-2xl"
+            class="bg-white p-2 rounded-xl shadow-xl text-center items-center justify-center border-t-4 border-t-primary transition duration-300 hover:shadow-2xl"
           >
-            <i class="fas fa-envelope text-5xl color-secondary mb-4"></i>
-            <h3 class="text-2xl font-bold color-primary mb-2">Email Support</h3>
+            <i class="fas fa-envelope text-5xl text-primary mb-4"></i>
+            <h3 class="text-2xl font-bold text-primary mb-2">Email Support</h3>
             <p class="text-lg text-gray-600 mb-4">
               The best way for detailed inquiries and project submissions.
             </p>
             <a
               href="mailto:info@precisiondesignsagency.com"
-              class="items-center justify-center text-lg font-semibold btn-green inline-block px-2 py-2 rounded-lg text-white transition duration-300"
+              class="mx-auto justify-center text-lg font-semibold btn-green inline-block px-2 py-2 rounded-lg text-white transition duration-300"
             >
               info@precisiondesignsagency.com
             </a>
@@ -244,12 +227,10 @@
 
           <!-- 2. Phone Card -->
           <div
-            class="bg-white p-8 rounded-xl shadow-xl text-center border-t-4 border-t-secondary transition duration-300 hover:shadow-2xl"
+            class="bg-white p-8 rounded-xl shadow-xl text-center border-t-4 border-t-primary transition duration-300 hover:shadow-2xl"
           >
-            <i class="fas fa-phone-alt text-5xl color-secondary mb-4"></i>
-            <h3 class="text-2xl font-bold color-primary mb-2">
-              Give Us a Call
-            </h3>
+            <i class="fas fa-phone-alt text-5xl text-primary mb-4"></i>
+            <h3 class="text-2xl font-bold text-primary mb-2">Give Us a Call</h3>
             <p class="text-lg text-gray-600 mb-4">
               Speak directly to our team during business hours (6am - 5pm SAST).
             </p>
@@ -263,10 +244,10 @@
 
           <!-- 3. Location Card -->
           <div
-            class="bg-white p-8 rounded-xl shadow-xl text-center border-t-4 border-t-secondary transition duration-300 hover:shadow-2xl"
+            class="bg-white p-8 rounded-xl shadow-xl text-center border-t-4 border-t-primary transition duration-300 hover:shadow-2xl"
           >
-            <i class="fas fa-map-marker-alt text-5xl color-secondary mb-4"></i>
-            <h3 class="text-2xl font-bold color-primary mb-2">
+            <i class="fas fa-map-marker-alt text-5xl text-primary mb-4"></i>
+            <h3 class="text-2xl font-bold text-primary mb-2">
               Our Office Location
             </h3>
             <p class="text-lg text-gray-600 mb-4">
@@ -380,7 +361,7 @@
             </div>
             <!-- Image Placeholder for Context -->
             <img
-              src="https://placehold.co/600x400/1C2E4A/ffffff?text=Focused+Teamwork+Placeholder"
+              src="public//images/hero.svg"
               alt="Placeholder image of focused teamwork"
               class="w-full h-auto object-cover rounded-xl shadow-2xl"
             />

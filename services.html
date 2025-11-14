@@ -31,48 +31,7 @@
         },
       };
     </script>
-    <style>
-      body {
-        font-family: "Inter", sans-serif;
-        background-color: #f7f8f9;
-      }
-      /* Agency Brand Colors */
-      .color-primary {
-        color: #1c2e4a;
-      }
-      .bg-primary {
-        background-color: #1c2e4a;
-      }
-      .color-secondary {
-        color: #4c84c4;
-      }
-      .bg-secondary {
-        background-color: #4c84c4;
-      }
-      .btn-green {
-        background-color: #10b981;
-      }
-      .btn-green:hover {
-        background-color: #059669;
-      }
-
-      /* Custom pricing card styling for emphasis */
-      .highlight-card {
-        transform: scale(1.05);
-        box-shadow: 0 20px 40px rgba(76, 132, 196, 0.4); /* Secondary color shadow */
-        border: 4px solid #4c84c4;
-        transition: all 0.3s ease-in-out;
-      }
-
-      /* Client logo carousel effect */
-      .logo-carousel-item {
-        filter: grayscale(100%);
-        transition: filter 0.3s ease;
-      }
-      .logo-carousel-item:hover {
-        filter: grayscale(0%);
-      }
-    </style>
+    <link rel="stylesheet" href="global.css" />
   </head>
   <body>
     <!-- Navigation Header (Consistent) -->
@@ -81,9 +40,13 @@
         <div class="flex justify-between items-center h-20">
           <!-- Logo: Precision Designs Agency -->
           <div class="flex-shrink-0">
-            <span class="text-3xl font-extrabold text-[#1C2E4A]"
-              >Precision Designs</span
-            >
+            <a href="index.html" class="block">
+              <img
+                src="/public/pda/logob.svg"
+                alt="Precision Designs Agency Logo"
+                class="h-16 w-auto md:h-20"
+              />
+            </a>
           </div>
           <!-- Navigation Links (Desktop) -->
           <nav class="hidden md:block">

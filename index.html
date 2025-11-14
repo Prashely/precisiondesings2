@@ -29,88 +29,7 @@
         },
       };
     </script>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
-
-      /* Custom Pulse Animation for CTA button */
-      @keyframes subtle-pulse {
-        0%,
-        100% {
-          box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.7);
-        }
-        50% {
-          box-shadow: 0 0 0 5px rgba(245, 158, 11, 0);
-        }
-      }
-      .animate-subtle-pulse {
-        animation: subtle-pulse 2s infinite cubic-bezier(0.4, 0, 0.6, 1);
-      }
-
-      /* Styling for the Floating WhatsApp Button */
-      .whatsapp-float {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        z-index: 1000;
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-
-      .whatsapp-float:hover {
-        transform: scale(1.05);
-        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
-      }
-      /* Agency Brand Colors */
-      .color-primary {
-        color: #1c2e4a;
-      }
-      .bg-primary {
-        background-color: #1c2e4a;
-      }
-      .color-secondary {
-        color: #4c84c4;
-      }
-      .bg-secondary {
-        background-color: #bc9c22;
-      }
-      .btn-green {
-        background-color: #bc9c22;
-      }
-      .btn-green:hover {
-        background-color: #eec50f;
-      }
-      .input-focus:focus {
-        border-color: #bc9c22;
-        box-shadow: 0 0 0 3px rgba(188, 156, 34, 0.5);
-      }
-      /* Fixed Background CTA Section */
-      .cta-fixed-bg {
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-        position: relative;
-      }
-      .cta-fixed-bg::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: rgba(10, 29, 55, 0.5);
-        z-index: 1;
-      }
-      .cta-fixed-bg > div {
-        position: relative;
-        z-index: 2;
-      }
-    </style>
+    <link rel="stylesheet" href="global.css" />
   </head>
   <body class="font-sans antialiased text-gray-800 bg-white">
     <!-- Navigation Header (Consistent) -->
@@ -123,7 +42,7 @@
               <img
                 src="/public/pda/logob.svg"
                 alt="Precision Designs Agency Logo"
-                class="h-12 w-auto md:h-20"
+                class="h-16 w-auto md:h-20"
               />
             </a>
           </div>
@@ -243,6 +162,7 @@
       });
     </script>
     <!-- Hero Section: Dark Background for a premium, bold feel -->
+    <!-- Hero Section: Dark Background for a premium, bold feel -->
     <section class="bg-dark-bg text-white py-20 sm:py-28 lg:py-36">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -283,16 +203,15 @@
             </div>
           </div>
 
-          <!-- Hero Image Placeholder -->
-          <div class="lg:col-span-6 hidden lg:block">
+          <!-- Hero Image Placeholder - REMOVED "hidden lg:block" CLASS -->
+          <div class="lg:col-span-6">
             <div
-              class="w-full h-96 bg-gray-700 rounded-2xl shadow-2xl flex items-center justify-center border-4 border-primary/50"
+              class="w-full h-auto rounded-lg shadow-2xl flex items-center justify-center border-b-4 border-primary/50"
             >
               <img
-                src="https://placehold.co/600x400/1D4ED8/ffffff?text=HERO+IMAGE+PLACEHOLDER"
-                alt="Digital Agency Placeholder Image"
-                class="rounded-xl w-full h-full object-cover opacity-70"
-                onerror="this.onerror=null; this.src='https://placehold.co/600x400/1D4ED8/ffffff?text=HERO+IMAGE+PLACEHOLDER'"
+                src="/public/images/hero.png"
+                alt="Precision Designs Hero Image"
+                class="rounded-xl w-full h-full object-cover"
               />
             </div>
           </div>
@@ -816,13 +735,19 @@
         <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
           <!-- Company Info -->
           <div>
-            <img
-              class="text-2xl font-bold text-[#4c84c4]"
-              src="/public/pda/logow.svg"
-            />
-            <p class="text-white">
-              Innovative, top-tier digital solutions for small and growing
-              businesses.
+            <!-- Logo: Precision Designs Agency -->
+            <div class="flex-shrink-0">
+              <a href="index.html" class="block">
+                <img
+                  src="/public/pda/logow.svg"
+                  alt="Precision Designs Agency Logo"
+                  class="h-12 w-auto md:h-20"
+                />
+              </a>
+            </div>
+            <p class="text-white font-light">
+              Helping small business grow with affordable, high-impact design &
+              marketing solutions.
             </p>
           </div>
 
