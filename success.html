@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thank You - Precision Designs Agency</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="global.css" />
+  </head>
+  <body class="bg-gray-50 min-h-screen flex items-center justify-center">
+    <section class="py-16 md:py-24 bg-gray-50">
+      <div class="max-w-2xl mx-auto px-4">
+        <div class="bg-white p-8 rounded-xl shadow-2xl">
+          <h2 class="text-3xl font-bold mb-6 text-center">Test Contact Form</h2>
+
+          <form
+            action="https://formsubmit.co/info@precisiondesignsagency.com"
+            method="POST"
+          >
+            <input
+              type="hidden"
+              name="_subject"
+              value="TEST: New Website Contact"
+            />
+            <input type="hidden" name="_template" value="table" />
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              required
+              class="w-full p-3 border rounded mb-4"
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              required
+              class="w-full p-3 border rounded mb-4"
+            />
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              required
+              class="w-full p-3 border rounded mb-4"
+            ></textarea>
+            <button
+              type="submit"
+              class="w-full bg-blue-500 text-white p-3 rounded"
+            >
+              Send Test Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
