@@ -185,9 +185,6 @@
 
     <!-- Modern Hero Section -->
     <section class="relative py-20 md:py-32 overflow-hidden bg-gradient-to-br from-secondary via-[#0a1d37] to-[#1C2E4A] text-white">
-      <div class="absolute inset-0 opacity-10">
-        <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMtOS45NCAwLTE4IDguMDYtMTggMThzOC4wNiAxOCAxOCAxOGgxMGM5Ljk0IDAgMTgtOC4wNiAxOC0xOHMtOC4wNi0xOC0xOC0xOEgzNnoiIGZpbGw9IiNmZmYiLz48L2c+PC9zdmc+')]"></div>
-      </div>
       <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div class="inline-flex items-center justify-center mb-6 px-4 py-2 bg-primary/10 backdrop-blur-sm rounded-full border border-primary/30">
           <span class="text-primary font-semibold">Case Studies & Results</span>
@@ -271,7 +268,7 @@
       <div class="max-w-5xl mx-auto px-6 text-center">
         <div class="inline-flex items-center justify-center mb-6 px-4 py-2 bg-primary/20 backdrop-blur-sm rounded-full border border-primary/30">
           <i class="fas fa-rocket text-primary mr-2"></i>
-          <span class="text-primary font-semibold">Ready to Transform?</span>
+          <span class="text-primary font-semibold">Ready For Serious Growth?</span>
         </div>
         <h2 class="text-4xl font-extrabold mb-6">
           Want Results Like These for Your Business?
@@ -516,7 +513,7 @@
             title: "KK Enterprise & Trading",
             description: "Complete business website | Google Business Profile setup | Professional online presence",
             link: "https://kktradingenterprise.co.za/",
-            image: "images/brands/x.png",
+            image: "images/brands/kk.jpg",
             deliverables: ["Website", "Google Business", "SEO Setup"]
           },
           {
@@ -539,21 +536,21 @@
             title: "Finky's Beauty Parlour",
             description: "Elegant beauty website | Service portfolio | Online booking optimized design",
             link: "https://finkysbeautyparlour.co.za/",
-            image: "images/portfolio/sec.png",
+            image: "images/brands/finky.png",
             deliverables: ["Beauty Website", "Portfolio", "Booking Ready"]
           },
           {
             title: "NM Beautician Hair",
             description: "Professional salon website | Service showcase | Client gallery integration",
             link: "https://nmhairbeautician.co.za",
-            image: "images/portfolio/sec.png",
+            image: "images/brands/nmlogo.jpeg",
             deliverables: ["Salon Website", "Gallery", "Service Pages"]
           },
           {
             title: "King's Blade Barber",
             description: "Barbershop website | Service menu | Location integration | Style portfolio",
             link: "https://kingsblade.co.za/",
-            image: "images/portfolio/7.png",
+            image: "images/brands/logo.png",
             deliverables: ["Barbershop Site", "Service Menu", "Location Map"]
           },
           {
@@ -576,7 +573,7 @@
             title: "EcoSuitors",
             description: "Business cards | Professional email setup | Marketing posters | Web hosting",
             link: "https://ecoxsuitors.co.za/",
-            image: "images/portfolio/4.png",
+            image: "images/brands/eco.jpg",
             deliverables: ["Branding", "Email Setup", "Hosting"]
           },
           {
@@ -599,7 +596,7 @@
             title: "Spetraray",
             description: "Consulting business website | Professional services showcase | Contact optimization",
             link: "https://spetraray.co.za/",
-            image: "images/brands/x.png",
+            image: "images/brands/spetraray.png",
             deliverables: ["Consulting Site", "Services", "Contact Forms"]
           },
           {
@@ -630,8 +627,7 @@
       function generatePortfolioCard(item, index) {
         return `
           <div class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100">
-            <!-- Image Container with gradient overlay -->
-            <div class="relative h-56 overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
+            <div class="relative h-56 overflow-hidden bg-white flex items-center justify-center">
               <img 
                 src="${item.image}" 
                 alt="${item.title}"
@@ -677,7 +673,7 @@
                 target="_blank"
                 class="w-full inline-flex items-center justify-center gap-2 bg-gray-50 hover:bg-primary text-gray-700 hover:text-white font-medium py-3 rounded-lg transition-all duration-300 group/btn"
               >
-                <span>View Project</span>
+                <span>View Website</span>
                 <i class="fas fa-arrow-right text-sm group-hover/btn:translate-x-1 transition-transform"></i>
               </a>
             </div>
