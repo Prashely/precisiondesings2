@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -281,7 +281,7 @@
           "aria-expanded",
           menuToggle.getAttribute("aria-expanded") === "false"
             ? "true"
-            : "false"
+            : "false",
         );
         // Animate icon
         menuIcon.classList.toggle("fa-bars");
@@ -550,7 +550,11 @@
                 src="images/image/home.jpg"
                 alt="Prashely"
                 class="rounded-xl w-full h-full object-cover opacity-80"
-                onerror="this.onerror=null; this.src='https://placehold.co/700x500/F59E0B/000000?text=SMALL+BUSINESS+FOCUS+IMAGE'"
+                onerror="
+                  this.onerror = null;
+                  this.src =
+                    'https://placehold.co/700x500/F59E0B/000000?text=SMALL+BUSINESS+FOCUS+IMAGE';
+                "
               />
             </div>
           </div>
@@ -718,7 +722,9 @@
     <!-- Final CTA Section (Strip) -->
     <section
       class="cta-fixed-bg py-16"
-      style="background: url('images/image/home-bg.jpg') fixed center/cover"
+      style="
+        background: url(&quot;images/image/home-bg.jpg&quot;) fixed center/cover;
+      "
     >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">
@@ -938,6 +944,13 @@
                   >Contact</a
                 >
               </li>
+              <li>
+                <a
+                  href="terms.html"
+                  class="text-white hover:text-primary/80 transition duration-150"
+                  >Terms & Conditions</a
+                >
+              </li>
             </ul>
           </div>
 
@@ -1014,8 +1027,7 @@
         <div
           class="mt-12 pt-8 border-t border-gray-700 text-center text-gray-500"
         >
-          &copy; 2025 Precision Designs Agency | Reg. No. K2025468219 | All
-          Rights Reserved
+          &copy; 2025 Precision Designs Agency | Reg. No. K2025468219
         </div>
       </div>
     </footer>
