@@ -1,8 +1,10 @@
 {
-  "rewrites": [
-    { "source": "/", "destination": "/home.html" },
-    { "source": "/contact", "destination": "/contact.html" },
-    { "source": "/service", "destination": "/service.html" },
-    { "source": "/portfolio", "destination": "/portfolio.html" }
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/index.html", "destination": "/", "permanent": true },
+    { "source": "/services.html", "destination": "/services", "permanent": true },
+    { "source": "/portfolio.html", "destination": "/portfolio", "permanent": true },
+    { "source": "/contact.html", "destination": "/contact", "permanent": true }
   ]
 }
