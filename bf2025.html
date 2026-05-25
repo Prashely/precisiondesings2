@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -122,7 +122,7 @@
         <div class="flex justify-between items-center h-20">
           <!-- Logo: Precision Designs Agency -->
           <div class="flex-shrink-0">
-            <a href="home.html" class="block">
+            <a href="home" class="block">
               <img
                 src="images/pda/logob.svg"
                 alt="Precision Designs Agency Black Logo"
@@ -224,7 +224,7 @@
           "aria-expanded",
           menuToggle.getAttribute("aria-expanded") === "false"
             ? "true"
-            : "false"
+            : "false",
         );
         // Animate icon
         menuIcon.classList.toggle("fa-bars");
@@ -1090,7 +1090,7 @@
 
         const days = Math.floor(distance / (1000 * 60 * 60 * 24));
         const hours = Math.floor(
-          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
         );
         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((distance % (1000 * 60)) / 1000);
