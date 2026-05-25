@@ -3,6 +3,8 @@
     { "source": "/", "destination": "/home.html" },
     { "source": "/contact", "destination": "/contact.html" },
     { "source": "/services", "destination": "/services.html" },
-    { "source": "/portfolio", "destination": "/portfolio.html" }
+    { "source": "/portfolio", "destination": "/portfolio.html" },
+    { "source": "/success", "destination": "/success.html" },
+    { "source": "/terms", "destination": "/terms.html" }
   ]
 }
